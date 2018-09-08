@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+		<meta name="MobileOptimized" content="width">
+		<meta name="HandheldFriendly" content="true">
+		<title>SVG Anim</title>
+	</head>
+	<style type="text/css">
+		html{
+			font-size:14px;
+			font-weight:400;
+			box-sizing:border-box;
+		}
+		#svgContainer{
+			position:relative;
+			overflow:hidden;
+			margin:3rem auto 1rem auto;
+			display:block;
+			width:420px;
+			height:auto;
+		}
+		#mySvg{
+			position:relative;
+			display:block;
+			overflow:hidden;
+			width:100%;
+			height:100%;
+		}
+		.svgcirc{
+			stroke:black;
+			fill:transparent;
+			stroke-width:2;
+			r:21;
+			cy:60%;
+		}
+		#circ-1{
+			cx:20%;
+		}
+		#circ-2{
+			cx:30%;
+		}
+		#circ-3{
+			cx:40%;
+		}
+		#circ-4{
+			cx:50%;
+		}
+		#clickBtn{
+			position:relative;
+			margin:1rem auto;
+			display:block;
+			padding:0.4rem 0;
+			max-width:160px;
+			font-weight:700;
+			text-align:center;
+			border-radius:8px;
+			border:none;
+			background:#2cba92;
+			font-size:1.8rem;
+		}
+	</style>
+	<body>
+		<main>
+			<div id="svgcontainer">
+				<svg id="mySvg" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+					<circle id="circ-1" class="svgcirc"/>
+					<circle id="circ-2" class="svgcirc"/>
+					<circle id="circ-3" class="svgcirc"/>
+					<circle id="circ-4" class="svgcirc"/>
+				</svg>
+			</div>
+			<div id="clickBtn">Click Me</div>
+		</main>
+		<script type="text/javascript">
+			var myBtn = document.getElementById("clickBtn"),
+				circles = document.querySelectorAll('.svgcirc');
+			myBtn.addEventListener('click', function(e){
+				function fillAnime(circles){
+					for(var i = 0; i < circles.length; i++){
+						(function(i){
+							setTimeout(function(){
+								circles[i].style.fill="blue";
+								console.log(circles[i]);
+							}, 400 * i);
+						})(i);
+					};
+				}			
+				fillAnime(circles);
+			})
+
+
+
+
+
+			// var myBtn = document.getElementById("clickBtn");
+			// myBtn.addEventListener('click', function(e){
+			// 	var circles = document.querySelectorAll('.svgcirc');
+			// 		circArr = [];
+			// 	for(var i = 0; i < circles.length; i++){
+			// 		var curCirc = circles[i];
+			// 		circArr.push(circles[i].id);
+			// 	}
+			// 	animateThatShit(circArr);
+			// })
+			// function animateThatShit(arr){
+			// 	for(var i = 0; i < arr.length; i++){
+			// 		(function(i){
+			// 			setTimeout(function(){
+			// 				document.getElementById(arr[i]).style.fill="blue";
+			// 				console.log(arr[i]);
+			// 			}, 400 * i);
+			// 		})(i);
+			// 	};
+			// }
+		</script>
+	</body>
+</html>
