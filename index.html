@@ -81,40 +81,16 @@
 				function fillAnime(circles){
 					for(var i = 0; i < circles.length; i++){
 						(function(i){
+							//Waits 0.4sec 
+							//Changes fill color current svg shape iteration 
 							setTimeout(function(){
 								circles[i].style.fill="blue";
-								console.log(circles[i]);
 							}, 400 * i);
 						})(i);
 					};
 				}			
 				fillAnime(circles);
 			})
-
-
-
-
-
-			// var myBtn = document.getElementById("clickBtn");
-			// myBtn.addEventListener('click', function(e){
-			// 	var circles = document.querySelectorAll('.svgcirc');
-			// 		circArr = [];
-			// 	for(var i = 0; i < circles.length; i++){
-			// 		var curCirc = circles[i];
-			// 		circArr.push(circles[i].id);
-			// 	}
-			// 	animateThatShit(circArr);
-			// })
-			// function animateThatShit(arr){
-			// 	for(var i = 0; i < arr.length; i++){
-			// 		(function(i){
-			// 			setTimeout(function(){
-			// 				document.getElementById(arr[i]).style.fill="blue";
-			// 				console.log(arr[i]);
-			// 			}, 400 * i);
-			// 		})(i);
-			// 	};
-			// }
 		</script>
 	</body>
 </html>
