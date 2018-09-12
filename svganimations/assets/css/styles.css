@@ -1,0 +1,109 @@
+/*GLOBALS*/
+/**screen widths**/
+/**colors**/
+/**mixins**/
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 0; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes arcAnimation {
+  99% {
+    fill: none; }
+  100% {
+    fill: #378dbd; } }
+#statsAnimationsContainer {
+  margin-top: 50px; }
+  #statsAnimationsContainer .statsAnimation {
+    position: relative;
+    width: 250px;
+    height: auto;
+    margin: 0 auto; }
+    #statsAnimationsContainer .statsAnimation .statsText, #statsAnimationsContainer .statsAnimation .statsSubText {
+      opacity: 0; }
+      #statsAnimationsContainer .statsAnimation .statsText.opaAnim, #statsAnimationsContainer .statsAnimation .statsSubText.opaAnim {
+        animation: opacityAnimation 1.2s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .statsText p, #statsAnimationsContainer .statsAnimation .statsSubText p {
+        position: relative;
+        text-align: center; }
+    #statsAnimationsContainer .statsAnimation .barSvgAnim {
+      max-width: 150px; }
+    #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec, #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
+      fill: none;
+      stroke: #378dbd;
+      stroke-miterlimit: 10; }
+    #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
+      color: #0C234B; }
+      #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p {
+        margin: 0;
+        color: #0C234B;
+        font-size: 36px;
+        line-height: 43px; }
+        #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p strong, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p strong {
+          font-size: 64px;
+          font-weight: bold;
+          line-height: 66px;
+          vertical-align: middle; }
+    #statsAnimationsContainer .statsAnimation .arcSvgAnim {
+      max-width: 115px; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
+        fill: none;
+        stroke: #378dbd;
+        stroke-miterlimit: 10; }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-0 {
+          transform: translate(83.2%, -12.6%) rotate(72deg); }
+          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-0.fill {
+            animation: arcAnimation 0.000s forwards linear; }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-1 {
+          transform: translate(39.6%, -19%) rotate(36deg); }
+          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-1.fill {
+            animation: arcAnimation 0.07s forwards linear; }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-2.fill {
+          animation: arcAnimation 0.21s forwards linear; }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-3 {
+          transform: translate(-20%, 37.2%) rotate(-36deg); }
+          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-3.fill {
+            animation: arcAnimation 0.28s forwards linear; }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-4 {
+          transform: translate(-13%, 78.6%) rotate(-72deg); }
+          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-4.fill {
+            animation: arcAnimation 0.35s forwards linear; }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-5 {
+          transform: translate(18.2%, 108.2%) rotate(-108deg); }
+          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-5.fill {
+            animation: arcAnimation 0.42s forwards linear; }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-6 {
+          transform: translate(62%, 114.6%) rotate(-144deg); }
+          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-6.fill {
+            animation: arcAnimation 0.49s forwards linear; }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-7 {
+          transform: translate(101.6%, 95.6%) rotate(-180deg); }
+          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-7.fill {
+            animation: arcAnimation 0.56s forwards linear; }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-8 {
+          transform: translate(121.5%, 58.4%) rotate(-216deg); }
+          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-8.fill {
+            animation: arcAnimation 0.63s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
+        position: absolute;
+        top: 48px;
+        transform: translateY(-23px);
+        margin: 0 auto;
+        left: 0;
+        right: -32px;
+        width: 220px; }
+    #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.cls-0.fill {
+      animation: arcAnimation 0.21s forwards linear; }
+    #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.cls-1.fill {
+      animation: arcAnimation 0.56s forwards linear; }
+    #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText {
+      position: relative;
+      margin: 10px auto 0 auto;
+      text-align: center;
+      width: 220px; }
+
+/*# sourceMappingURL=styles.css.map */

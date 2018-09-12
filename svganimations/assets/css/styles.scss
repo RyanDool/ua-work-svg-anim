@@ -1,0 +1,201 @@
+/*GLOBALS*/
+/**screen widths**/
+$screen_micro: 320px;
+$screen_sub_mini: 450px;
+$screen_mini: 500px;
+$screen_sup_mini: 580px;
+$screen_sub_small: 680px; 
+$screen_small: 768px;
+$screen_medium: 1024px;
+$screen_large: 1200px;
+$screen_xlarge: 1800px;
+/**colors**/
+$bloom: #ef4056;
+$uared: #ab0520;
+$chili: #8b0015;
+$sky: #81d3eb;
+$oasis: #378dbd;
+$azurite: #1e5288;
+$uablue: #0c234b;
+$midnight: #001c48;
+$coolgrey: #e2e9eb;
+$warmgrey: #f4ede5;
+$leaf: #70b865;
+$river: #007d84;
+$silver: #9eabae;
+$mesa: #a95c42;
+/**mixins**/
+@mixin animation($animate...) {
+	$max: length($animate);
+	$animations: '';
+	@for $i from 1 through $max {
+		$animations: #{$animations + nth($animate, $i)};
+		@if $i < $max {
+			$animations: #{$animations + ", "};
+		}
+	}
+	-webkit-animation: $animations;
+	-moz-animation: $animations;
+	-o-animation: $animations;
+	animation: $animations;
+}
+@mixin keyframes($animationName) {
+	@-webkit-keyframes #{$animationName} {
+		@content;
+	}
+	@-moz-keyframes #{$animationName} {
+		@content;
+	}
+	@-o-keyframes #{$animationName} {
+		@content;
+	}
+	@keyframes #{$animationName} {
+		@content;
+	}
+}
+@keyframes opacityAnimation{
+	0%{opacity:0;}
+	30%{opacity:0;}
+	80%{opacity:1;}
+	100%{opacity:1;}
+}
+@keyframes arcAnimation{
+	99%{fill:none;}
+	100%{fill:#378dbd;}
+}
+#statsAnimationsContainer{
+	margin-top:50px;
+	.statsAnimation{
+		position:relative;
+		width:250px;
+		height:auto;
+		margin:0 auto;
+		.statsText, .statsSubText{
+			opacity:0;
+			&.opaAnim{
+				animation:opacityAnimation 1.2s forwards linear; 
+			}
+			p{
+				position:relative;
+				text-align:center;
+			}
+		}
+		.barSvgAnim{
+			max-width:150px;
+		}
+		.barSvgAnim, .arcSvgAnim{
+			svg{
+				.arcsec{
+					fill:none;
+					stroke:#378dbd;
+					stroke-miterlimit:10;
+				}
+			}
+			.statsText{
+				color:#0C234B;
+				p{
+					margin:0;
+					color:#0C234B;
+					font-size:36px;
+					line-height:43px;
+					strong{
+						font-size:64px;
+						font-weight:bold;
+						line-height:66px;
+						vertical-align:middle;
+					}
+				}
+			}
+		}
+		.arcSvgAnim{
+			max-width:115px;
+			svg{
+				.arcsec{
+					fill:none;
+					stroke:#378dbd;
+					stroke-miterlimit:10;
+					&.cls-0{
+						transform: translate(83.2%, -12.6%) rotate(72deg);
+						&.fill{
+							animation:arcAnimation 0.000s forwards linear; 
+						}
+					}
+					&.cls-1{
+						transform: translate(39.6%, -19%) rotate(36deg);
+						&.fill{
+							animation:arcAnimation 0.07s forwards linear; 
+						}
+					}
+					&.cls-2{
+						&.fill{
+							animation:arcAnimation 0.21s forwards linear; 
+						}
+					}
+					&.cls-3{
+						transform: translate(-20%, 37.2%) rotate(-36deg);
+						&.fill{
+							animation:arcAnimation 0.28s forwards linear; 
+						}
+					}
+					&.cls-4{
+						transform: translate(-13%, 78.6%) rotate(-72deg);
+						&.fill{
+							animation:arcAnimation 0.35s forwards linear; 
+						}
+					}
+					&.cls-5{
+						transform: translate(18.2%, 108.2%) rotate(-108deg);
+						&.fill{
+							animation:arcAnimation 0.42s forwards linear; 
+						}
+					}
+					&.cls-6{
+						transform: translate(62%, 114.6%) rotate(-144deg);
+						&.fill{
+							animation:arcAnimation 0.49s forwards linear; 
+						}
+					}
+					&.cls-7{
+						transform: translate(101.6%, 95.6%) rotate(-180deg);
+						&.fill{
+							animation:arcAnimation 0.56s forwards linear; 
+						}
+					}
+					&.cls-8{
+						transform: translate(121.5%, 58.4%) rotate(-216deg);
+						&.fill{
+							animation:arcAnimation 0.63s forwards linear; 
+						}
+					}
+				}
+			}
+			.statsText{
+				position:absolute;
+				top:48px;
+				transform:translateY(-23px);
+				margin:0 auto;
+				left:0;
+				right:-32px;
+				width:220px;
+			}
+		}
+		.barSvgAnim{
+			svg{
+				.arcsec{
+					&.cls-0.fill{
+						animation:arcAnimation 0.21s forwards linear; 
+					}
+					&.cls-1.fill{
+						animation:arcAnimation 0.56s forwards linear; 
+					}
+				}
+			}
+			.statsText{
+				position:relative;
+				margin:10px auto 0 auto;
+				text-align:center;
+				width:220px;
+			}
+		}
+	}
+}
