@@ -15,11 +15,13 @@
 	<body id="page-top">
 		<main>
 			<div class="container content">
+
+
+
+
 				<div id="statsAnimationsContainer" class="row">
-
-
-
-					<div id="statsAnimations1" class="col-sm-4 col-md-4">
+					<!-- Stat Item -->
+					<div id="statsAnimations1" class="col-xs-12 col-md-4 text-center statAnimationSegment">
 						<div class="statsAnimation">
 							<div class="arcSvgAnim">
 								<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113 120">
@@ -43,8 +45,8 @@
 							</div>
 						</div>
 					</div>
-
-					<div id="statsAnimations2" class="col-sm-4 col-md-4">
+					<!-- Stat Item -->
+					<div id="statsAnimations2" class="col-xs-12 col-md-4 text-center statAnimationSegment">
 						<div class="statsAnimation">
 							<div class="barSvgAnim">
 								<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131.5 20">
@@ -62,10 +64,8 @@
 							</div>
 						</div>
 					</div>
-
-
-
-					<div id="statsAnimations3" class="col-sm-4 col-md-4">
+					<!-- Stat Item -->
+					<div id="statsAnimations3" class="col-xs-12 col-md-4 text-center statAnimationSegment">
 						<div class="statsAnimation">
 							<div class="arcSvgAnim">
 								<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113 120">
@@ -89,49 +89,138 @@
 							</div>
 						</div>
 					</div>
-
-
 				</div>
+
+
+
+
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+
+
+
+
+
+				<div id="willIGradContainer" class="row">
+					<div class="col-xs-12">
+						<h2 class="sans text-blue text-center">Will I graduate with debt?</h2>
+					</div>
+
+					<div id="willIGradAniArea" class="col-xs-12 col-md-5 col-md-offset-2">
+						<div id="willIGradLeftSide" class="willIGradSide">
+							<span>national</span>
+						</div>
+						<div id="willIGradAniContainer">
+							<div id="willIGradAniTop">
+								<div id="willIGradSlideUp" class="willIGradSlide"></div>
+								<div class="willIGradTriHead"></div>
+								<div class="willIGradTriBody"></div>
+								<div class="willIGradTriText">
+									<span>$5-7</span>
+									<span class="willIGradTextColor blue">THOUSAND</span>
+								</div>	
+							</div>
+							<div class="verySpecialHr"></div>	
+							<div id="willIGradAniBottom">
+								<div id="willIGradSlideDown" class="willIGradSlide"></div>
+								<div class="willIGradTriText">
+									<span>17</span>
+									<span class="willIGradTextColor red">PERCENT</span>
+								</div>	
+								<div class="willIGradTriBody"></div>
+								<div class="willIGradTriHead"></div>
+							</div>						
+						</div>
+						<div id="willIGradRightSide" class="willIGradSide">
+							<span>average</span>
+						</div>
+
+					</div>
+
+
+
+					<div class="col-xs-12 col-md-5">
+						<span class="text-size-h3 sans text-azurite display-block">More salary</span>
+						<p>Arizona students who took advantage of Student Engagement and Career Development earned <strong>$5,00-$7,500 more</strong> in their first jobs than the average college graduate.*</p>
+						<span class="text-size-h3 sans text-azurite display-block">Less debt</span>
+						<p>Arizona grads leave with <strong>17% less debt</strong> than the national average according to LendEDU data.</p>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
 			</div>
-			<div id="clickani">Click me</div>
+
+
+
 		</main>
 		<footer></footer>	
 		<script type="text/javascript">
-			var myBtn = document.getElementById('clickani'),
-				firstStatText = document.querySelectorAll('.statsText'),
-				firstStatSubText = document.querySelectorAll('.statsSubText'),
+			var statsElem = document.getElementById('statsAnimationsContainer'),
+				statText = document.querySelectorAll('.statsText'),
+				statSubText = document.querySelectorAll('.statsSubText'),
 				arcSecs = document.querySelectorAll('.arcsec');
-			myBtn.addEventListener('click', function(e){
-
-				/* ~~~~~~~~~~~~~~~~~~~ */
-				/* NOTE NOTE NOTE NOTE */
-				/* ~~~~~~~~~~~~~~~~~~~ */
-				//Figure out how to change oppacity with avoiding js single threading...
-				// firstStatText.classList.add('opaAnim');
-				// firstStatSubText.classList.add('opaAnim');
-				/* ~~~~~~~~~~~~~~~~~~~ */
-				/* NOTE NOTE NOTE NOTE */
-				/* ~~~~~~~~~~~~~~~~~~~ */
-
-
-
+			function statsAnimations(){
+				//add css animation class to larger text
+				for(var i = 0; i < statText.length; i++){
+					statText[i].classList.add("opaAnimText");
+				}
+				//add css animation class to detailed text
+				for(var i = 0; i < statSubText.length; i++){
+					statSubText[i].classList.add("opaAnimText");
+				}
+				//add css animation classs to svg paths
 				for(var i = 0; i < arcSecs.length; i++){
 					arcSecs[i].classList.add("fill");
 				}
+			}
+			function isInViewport(elem){
+				var bounding = elem.getBoundingClientRect();
+				return(
+					bounding.top >= 0 &&
+					bounding.left >= 0 &&
+					bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+					bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+				);
+			};
+			function inFrameAnim(event){
+				if (isInViewport(statsElem)){
+					statsAnimations();
+				}
+			};
+			if(window.addEventListener){
+				addEventListener('DOMContentLoaded', inFrameAnim, false); 
+				addEventListener('load', inFrameAnim, false); 
+				addEventListener('scroll', inFrameAnim, false); 
+				addEventListener('resize', inFrameAnim, false); 
+			}else if (window.attachEvent) {
+				attachEvent('onDOMContentLoaded', inFrameAnim); // IE9+
+				attachEvent('onload', inFrameAnim);
+				attachEvent('onscroll', inFrameAnim);
+				attachEvent('onresize', inFrameAnim);
+			}
 
-				// function fillAnime(arcSecs){
-				// 	for(var i = 0; i < arcSecs.length; i++){
-				// 		(function(i){
-				// 			//Waits 0.066sec 
-				// 			//Changes fill color current svg shape iteration 
-				// 			setTimeout(function(){
-				// 				arcSecs[i].classList.add("fill");
-				// 			}, 66 * i);
-				// 		})(i);
-				// 	};
-				// }			
-				// fillAnime(arcSecs);
-			})
+
+
 		</script>
 	</body>
 </html>

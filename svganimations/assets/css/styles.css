@@ -16,94 +16,155 @@
     fill: none; }
   100% {
     fill: #378dbd; } }
-#statsAnimationsContainer {
-  margin-top: 50px; }
-  #statsAnimationsContainer .statsAnimation {
-    position: relative;
-    width: 250px;
-    height: auto;
-    margin: 0 auto; }
-    #statsAnimationsContainer .statsAnimation .statsText, #statsAnimationsContainer .statsAnimation .statsSubText {
-      opacity: 0; }
-      #statsAnimationsContainer .statsAnimation .statsText.opaAnim, #statsAnimationsContainer .statsAnimation .statsSubText.opaAnim {
-        animation: opacityAnimation 1.2s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .statsText p, #statsAnimationsContainer .statsAnimation .statsSubText p {
-        position: relative;
-        text-align: center; }
-    #statsAnimationsContainer .statsAnimation .barSvgAnim {
-      max-width: 150px; }
-    #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec, #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
+@media (max-width: 991px) {
+  #statsAnimationsContainer .statAnimationSegment {
+    margin: 0 auto 4rem auto; }
+    #statsAnimationsContainer .statAnimationSegment:last-child {
+      margin: 0 auto; } }
+#statsAnimationsContainer .statsAnimation {
+  position: relative;
+  width: 250px;
+  height: auto;
+  margin: 0 auto; }
+  #statsAnimationsContainer .statsAnimation .statsText, #statsAnimationsContainer .statsAnimation .statsSubText {
+    opacity: 0; }
+    #statsAnimationsContainer .statsAnimation .statsText.opaAnimText, #statsAnimationsContainer .statsAnimation .statsSubText.opaAnimText {
+      animation: opacityAnimation 1.2s forwards linear; }
+    #statsAnimationsContainer .statsAnimation .statsText p, #statsAnimationsContainer .statsAnimation .statsSubText p {
+      position: relative;
+      text-align: center; }
+  #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec, #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
+    fill: none;
+    stroke: #378dbd;
+    stroke-miterlimit: 10; }
+  #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
+    color: #0C234B; }
+    #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p {
+      margin: 0;
+      color: #0C234B;
+      font-size: 36px;
+      line-height: 43px; }
+      #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p strong, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p strong {
+        font-size: 64px;
+        font-weight: bold;
+        line-height: 66px;
+        vertical-align: middle; }
+  #statsAnimationsContainer .statsAnimation .arcSvgAnim {
+    max-width: 115px; }
+    #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
       fill: none;
       stroke: #378dbd;
       stroke-miterlimit: 10; }
-    #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
-      color: #0C234B; }
-      #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p {
-        margin: 0;
-        color: #0C234B;
-        font-size: 36px;
-        line-height: 43px; }
-        #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p strong, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p strong {
-          font-size: 64px;
-          font-weight: bold;
-          line-height: 66px;
-          vertical-align: middle; }
-    #statsAnimationsContainer .statsAnimation .arcSvgAnim {
-      max-width: 115px; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
-        fill: none;
-        stroke: #378dbd;
-        stroke-miterlimit: 10; }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-0 {
-          transform: translate(83.2%, -12.6%) rotate(72deg); }
-          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-0.fill {
-            animation: arcAnimation 0.000s forwards linear; }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-1 {
-          transform: translate(39.6%, -19%) rotate(36deg); }
-          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-1.fill {
-            animation: arcAnimation 0.07s forwards linear; }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-2.fill {
-          animation: arcAnimation 0.21s forwards linear; }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-3 {
-          transform: translate(-20%, 37.2%) rotate(-36deg); }
-          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-3.fill {
-            animation: arcAnimation 0.28s forwards linear; }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-4 {
-          transform: translate(-13%, 78.6%) rotate(-72deg); }
-          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-4.fill {
-            animation: arcAnimation 0.35s forwards linear; }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-5 {
-          transform: translate(18.2%, 108.2%) rotate(-108deg); }
-          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-5.fill {
-            animation: arcAnimation 0.42s forwards linear; }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-6 {
-          transform: translate(62%, 114.6%) rotate(-144deg); }
-          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-6.fill {
-            animation: arcAnimation 0.49s forwards linear; }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-7 {
-          transform: translate(101.6%, 95.6%) rotate(-180deg); }
-          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-7.fill {
-            animation: arcAnimation 0.56s forwards linear; }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-8 {
-          transform: translate(121.5%, 58.4%) rotate(-216deg); }
-          #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-8.fill {
-            animation: arcAnimation 0.63s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
-        position: absolute;
-        top: 48px;
-        transform: translateY(-23px);
-        margin: 0 auto;
-        left: 0;
-        right: -32px;
-        width: 220px; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-0 {
+        transform: translate(83.2%, -12.6%) rotate(72deg);
+        -webkit-transform: translate(83.2%, -12.6%) rotate(72deg);
+        -moz-transform: translate(83.2%, -12.6%) rotate(72deg);
+        -o-transform: translate(83.2%, -12.6%) rotate(72deg); }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-0.fill {
+          animation: arcAnimation 0.000s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-1 {
+        transform: translate(39.6%, -19%) rotate(36deg);
+        -webkit-transform: translate(39.6%, -19%) rotate(36deg);
+        -moz-transform: translate(39.6%, -19%) rotate(36deg);
+        -o-transform: translate(39.6%, -19%) rotate(36deg); }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-1.fill {
+          animation: arcAnimation 0.07s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-2.fill {
+        animation: arcAnimation 0.21s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-3 {
+        transform: translate(-20%, 37.2%) rotate(-36deg);
+        -webkit-transform: translate(-20%, 37.2%) rotate(-36deg);
+        -moz-transform: translate(-20%, 37.2%) rotate(-36deg);
+        -o-transform: translate(-20%, 37.2%) rotate(-36deg); }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-3.fill {
+          animation: arcAnimation 0.28s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-4 {
+        transform: translate(-13%, 78.6%) rotate(-72deg);
+        -webkit-transform: translate(-13%, 78.6%) rotate(-72deg);
+        -moz-transform: translate(-13%, 78.6%) rotate(-72deg);
+        -o-transform: translate(-13%, 78.6%) rotate(-72deg); }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-4.fill {
+          animation: arcAnimation 0.35s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-5 {
+        transform: translate(18.2%, 108.2%) rotate(-108deg);
+        -webkit-transform: translate(18.2%, 108.2%) rotate(-108deg);
+        -moz-transform: translate(18.2%, 108.2%) rotate(-108deg);
+        -o-transform: translate(18.2%, 108.2%) rotate(-108deg); }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-5.fill {
+          animation: arcAnimation 0.42s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-6 {
+        transform: translate(62%, 114.6%) rotate(-144deg);
+        -webkit-transform: translate(62%, 114.6%) rotate(-144deg);
+        -moz-transform: translate(62%, 114.6%) rotate(-144deg);
+        -o-transform: translate(62%, 114.6%) rotate(-144deg); }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-6.fill {
+          animation: arcAnimation 0.49s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-7 {
+        transform: translate(101.6%, 95.6%) rotate(-180deg);
+        -webkit-transform: translate(101.6%, 95.6%) rotate(-180deg);
+        -moz-transform: translate(101.6%, 95.6%) rotate(-180deg);
+        -o-transform: translate(101.6%, 95.6%) rotate(-180deg); }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-7.fill {
+          animation: arcAnimation 0.56s forwards linear; }
+      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-8 {
+        transform: translate(121.5%, 58.4%) rotate(-216deg);
+        -webkit-transform: translate(121.5%, 58.4%) rotate(-216deg);
+        -moz-transform: translate(121.5%, 58.4%) rotate(-216deg);
+        -o-transform: translate(121.5%, 58.4%) rotate(-216deg); }
+        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-8.fill {
+          animation: arcAnimation 0.63s forwards linear; }
+    #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
+      position: absolute;
+      top: 48px;
+      transform: translateY(-23px);
+      -webkit-transform: translateY(-23px);
+      -moz-transform: translateY(-23px);
+      -o-transform: translateY(-23px);
+      margin: 0 auto;
+      left: 0;
+      right: -32px;
+      width: 220px; }
+  #statsAnimationsContainer .statsAnimation .barSvgAnim {
+    max-width: 150px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: auto; }
     #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.cls-0.fill {
       animation: arcAnimation 0.21s forwards linear; }
     #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.cls-1.fill {
       animation: arcAnimation 0.56s forwards linear; }
     #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText {
       position: relative;
-      margin: 10px auto 0 auto;
+      margin: 4px auto 29px auto;
       text-align: center;
-      width: 220px; }
+      width: 100%; }
+      @media (max-width: 991px) {
+        #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText {
+          margin: 4px auto 8px auto; } }
+
+#willIGradContainer #willIGradAniArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: relative; }
+  #willIGradContainer #willIGradAniArea .willIGradSide span {
+    display: block;
+    position: relative;
+    top: 50%;
+    margin-top: -12px;
+    font-style: italic;
+    padding: 0 2px;
+    font-weight: 600; }
+  #willIGradContainer #willIGradAniArea #willIGradAniContainer {
+    flex-grow: 1; }
+    #willIGradContainer #willIGradAniArea #willIGradAniContainer #willIGradAniTop, #willIGradContainer #willIGradAniArea #willIGradAniContainer #willIGradAniBottom {
+      position: relative;
+      overflow: hidden; }
+    #willIGradContainer #willIGradAniArea #willIGradAniContainer .verySpecialHr {
+      position: relative;
+      display: block;
+      border-top: 2px dashed #000000; }
 
 /*# sourceMappingURL=styles.css.map */
