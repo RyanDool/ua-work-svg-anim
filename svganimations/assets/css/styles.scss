@@ -63,6 +63,14 @@ $mesa: #a95c42;
 	99%{fill:none;}
 	100%{fill:#378dbd;}
 }
+@keyframes statSlideUp{
+	0%{top:0;}
+	100%{top:-110%;}
+}
+@keyframes statSlideDown{
+	0%{bottom:0;}
+	100%{bottom:-110%;}
+}
 #statsAnimationsContainer{
 	.statAnimationSegment{
 		@media(max-width:991px){
@@ -249,41 +257,185 @@ $mesa: #a95c42;
 
 
 #willIGradContainer{
-	#willIGradAniArea{
+	position:relative;
+	margin:0 auto;
+	float:none;
+	.willIGradArrowRow{
 		display:flex;
 		flex-direction:row;
 		flex-wrap:nowrap;
-		justify-content:space-between;
-		position:relative;
-		.willIGradSide{
-			span{
-				display:block;
-				position:relative;
-				top:50%;
-				margin-top:-12px;
-				font-style:italic;
-				padding:0 2px;
-				font-weight:600;
+		justify-content:center;
+		@media(max-width:991px){
+			flex-direction:column-reverse;
+		}
+		&#willIGradArrowRowDown{
+			@media(max-width:991px){
+				flex-direction:column !important;
+			}
+			.mainTextContainer{
+				margin-top:3rem;
+				@media(max-width:991px){
+					margin-top:1rem;
+				}				
 			}
 		}
-		#willIGradAniContainer{
+		.willIGradArrowArea{
+			position:relative;
+			overflow:hidden;
+			height:auto;
+			background-color:#eff6fa;
+			.willIGradSlide{
+				width:100%;
+				height:100%;
+				position:absolute;
+				left:0;
+				right:0;
+				margin:0 auto;
+				background:#eff6fa;
+				z-index:5;
+			}
+			.arrowContainer{
+				position:relative;
+				display:block;
+				margin:0 auto;
+				.willIgradArrow{
+					width:115px;
+					height:145px;
+					margin:0 auto;
+					display:block;
+					position:relative;
+					&:before{
+						content: '';
+						border-left: 90px solid transparent;
+						border-right: 90px solid transparent;
+						position: absolute;
+						margin: 0 auto;
+						left: -33px;
+						right: 0;
+						width:90px;
+					}
+					.arrowText, .arrowMainText{
+						display:block;
+						position:absolute;
+						margin:0 auto;
+						left:0;
+						right:0;
+						font-size:48px;
+						font-weight:bold;
+						line-height:57px;
+						text-align:center;
+					}
+					.arrowText{
+						color:#ffffff;
+					}
+					.arrowMainText{
+						background-color:#eff6fa;
+					}
+				}
+			}
+		}
+		.mainTextContainer{
 			flex-grow:1;
-			#willIGradAniTop, #willIGradAniBottom{
-				position:relative;
-				overflow:hidden;
-			}
-			#willIGradAniTop{
-				
-			}
-			.verySpecialHr{
-				position:relative;
-				display:block;
-				border-top:2px dashed #000000;
-			}
-			#willIGradAniBottom{
-				
+		}
+		#willIGradAreaUp{
+			&.willIGradArrowArea{
+				.willIGradSlide{
+					top:0;
+					&.opaAnimText{
+						animation:statSlideUp 1.2s forwards linear; 
+					}
+				}
+				.arrowContainer{
+					.willIgradArrow{
+						background-color:#1E5288;
+						margin:90px auto 0 auto;
+						&:before{
+							border-bottom: 90px solid #1E5288;
+							top: -90px;
+						}
+						.arrowText{
+							left:0;
+							bottom:83px;
+						}
+						.arrowMainText{
+							color:#1E5288;
+							bottom:26px;
+							left:-60px;
+						}
+					}
+				}
 			}
 		}
+		#willIGradAreaDown{
+			&.willIGradArrowArea{
+				.willIGradSlide{
+					bottom:0;
+					&.opaAnimText{
+						animation:statSlideDown 1.2s forwards linear; 
+					}
+				}
+				.arrowContainer{
+					.willIgradArrow{
+						background-color:#AB0520;
+						margin:0 auto 90px auto;
+						&:before{
+							border-top: 90px solid #AB0520;
+							bottom: -90px;
+						}
+						.arrowText{
+							top:5px;
+						}
+						.arrowMainText{
+							color:#AB0520;
+							top:65px;
+							left:-31px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.verySpecialHrRow{
+			position:relative;
+			height:2px;
+			line-height:0;
+			@media(max-width:991px){
+				width:100%;
+			}
+		.verySpecialHr{
+			position:relative;
+			vertical-align:middle;
+			border-bottom:2px dashed #000000;
+			@media(max-width:991px){
+				display:none;
+				width:100%;
+				float:right;
+				right:140px;
+			}
+		}
+		.verySpecialHrText{
+			display:block;
+			position:relative;
+			line-height:0;
+			font-size:20px;
+			padding-left:1.3rem;
+			font-style:italic;
+			@media(max-width:991px){
+				display:none;
+				position:absolute;
+				right:0;
+			}
+			span{
+				@media(max-width:991px){
+					position:absolute;
+					right:0;
+				}
+			}
+		}
+	}
+	.mainTextContainer{
+		margin-top:2rem;
+		padding-left:1.4rem;
 	}
 }
 
