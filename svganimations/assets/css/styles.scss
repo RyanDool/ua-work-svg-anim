@@ -256,6 +256,11 @@ $mesa: #a95c42;
 
 
 
+
+
+
+
+
 #willIGradContainer{
 	position:relative;
 	margin:0 auto;
@@ -265,8 +270,11 @@ $mesa: #a95c42;
 		flex-direction:row;
 		flex-wrap:nowrap;
 		justify-content:center;
+		width:66.666%;
+		margin:0 auto;
 		@media(max-width:991px){
 			flex-direction:column-reverse;
+			width:100%;
 		}
 		&#willIGradArrowRowDown{
 			@media(max-width:991px){
@@ -399,6 +407,8 @@ $mesa: #a95c42;
 			position:relative;
 			height:2px;
 			line-height:0;
+			margin:0 auto;
+			width:66.666%;
 			@media(max-width:991px){
 				width:100%;
 			}
@@ -436,6 +446,9 @@ $mesa: #a95c42;
 	.mainTextContainer{
 		margin-top:2rem;
 		padding-left:1.4rem;
+	}
+	.top-buffer-xs-50{
+		margin-top:50px;
 	}
 }
 

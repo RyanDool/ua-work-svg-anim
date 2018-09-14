@@ -187,26 +187,33 @@
 				statsGradElem = document.getElementById('willIGradContainer'),
 				statsGradSlideUp = document.getElementById('willIGradSlideUp'),
 				statsGradSlideDown = document.getElementById('willIGradSlideDown'),
+				tuitionFeesTarget = document.getElementById('block-bean-cost-aid-freshmen-tuition-f'),
 				statText = document.querySelectorAll('.statsText'),
+				tuitionArea = document.querySelectorAll('.adm-section-content'),
 				statSubText = document.querySelectorAll('.statsSubText'),
 				arcSecs = document.querySelectorAll('.arcsec');
 			function statsAnimations(){
 				//add css animation class to larger text
 				for(var i = 0; i < statText.length; i++){
-					statText[i].classList.add("opaAnimText");
+					statText[i].classList.add('opaAnimText');
 				}
 				//add css animation class to detailed text
 				for(var i = 0; i < statSubText.length; i++){
-					statSubText[i].classList.add("opaAnimText");
+					statSubText[i].classList.add('opaAnimText');
 				}
 				//add css animation classs to svg paths
 				for(var i = 0; i < arcSecs.length; i++){
-					arcSecs[i].classList.add("fill");
+					arcSecs[i].classList.add('fill');
 				}
 			}
 			function statsGradAnimations(){
 				statsGradSlideUp.classList.add('opaAnimText');
 				statsGradSlideDown.classList.add('opaAnimText');
+			}
+			function tuitionSlideDown(){
+				for(var i = 0; i < tuitionArea.length; i++){
+					tuitionArea[i].classList.add('active');
+				}
 			}
 			function isInViewport(elem){
 				var bounding = elem.getBoundingClientRect();
@@ -224,7 +231,13 @@
 				if(isInViewport(statsGradElem)){
 					statsGradAnimations();
 				}
+				if(isInViewport(tuitionFeesTarget)){
+					tuitionSlideDown();
+				}
 			};
+			if(window.innerWidth < 992){
+				statsGradSlideDown();
+			}
 			if(window.innerWidth < 800){
 				statsAnimations();
 				statsGradAnimations();
