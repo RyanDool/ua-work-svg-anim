@@ -1,302 +1,1206 @@
-/*GLOBALS*/
-/**screen widths**/
-/**colors**/
-/**mixins**/
+/*
+* > COLORS
+*/
+/*
+* > TEXT COLORS
+*/
+.text-white {
+  color: white;
+}
+
+.text-blue {
+  color: #0C234B;
+}
+
+.text-red {
+  color: #ab0520;
+}
+
+.text-midnight {
+  color: #001C48;
+}
+
+.text-azurite {
+  color: #1e5288;
+}
+
+.text-oasis {
+  color: #378DBD;
+}
+
+.text-sky {
+  color: #81D3EB;
+}
+
+/*
+* > TEXT ALIGNMENT & TRANSFORMATIONS
+*/
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-thin {
+  font-weight: 400;
+}
+
+/*
+* > BACKGROUND COLORS
+*/
+.bg-blue {
+  background-color: #0C234B;
+}
+
+.bg-blue-transparent {
+  background-color: rgba(12, 35, 75, 0.9);
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-white-transparent {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-oasis-transparent {
+  background-color: rgba(55, 141, 189, 0.08);
+}
+
+/*
+* > BORDERS
+*/
+.border-oasis {
+  border-bottom: 5px solid #378DBD;
+}
+
+.page-node-3067 {
+  /*
+  * > HERO SECTION
+  */
+  /*
+  * > STATS SECTION
+  */
+  /*
+  * > CONTENT BODY - Tuition & Fees Section
+  */
+  /*
+  * > CONTENT POSTSCRIPS - Scholarships Section
+  */
+  /*
+  * > FULL WIDTH CONTENT BOTTOM - "Best Buy" Section
+  */
+  /*
+  * > CONTENT BOTTOM PRESCRIPT - Types of Aid Section
+  */
+  /*
+  * > CONTENT BOTTOM - Graduate w/ Debt Section
+  */
+  /*
+  * > CONTENT BOTTOM POSTSCRIPT - Fund My Education Section
+  */
+  /*
+  * > FOOTER PRESCRIPT - Have Questions Section
+  */
+  /*
+  * > GENERAL
+  */
+}
+.page-node-3067 #main:after {
+  display: none;
+}
+.page-node-3067 .adm-section-content-top {
+  background-image: url("/sites/admissions-dev.arizona.edu/files/Hero_banner_CostAid.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+}
+.page-node-3067 .adm-section-content-top h1 {
+  margin: 0px;
+}
+.page-node-3067 .adm-section-content-top h2 {
+  margin-top: 1.5rem;
+}
+.page-node-3067 .adm-section-content-pre {
+  background-color: rgba(55, 141, 189, 0.08);
+  padding: 8rem 0;
+}
+.page-node-3067 .adm-section-content-pre .stat {
+  display: block;
+  margin: 1rem auto 0px;
+  max-width: 245px;
+}
 @keyframes opacityAnimation {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   30% {
-    opacity: 0; }
+    opacity: 0;
+  }
   80% {
-    opacity: 1; }
+    opacity: 1;
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 @keyframes arcAnimation {
   99% {
-    fill: none; }
+    fill: none;
+  }
   100% {
-    fill: #378dbd; } }
-@keyframes statSlideUp {
-  0% {
-    top: 0; }
-  100% {
-    top: -110%; } }
-@keyframes statSlideDown {
-  0% {
-    bottom: 0; }
-  100% {
-    bottom: -110%; } }
+    fill: #378dbd;
+  }
+}
 @media (max-width: 991px) {
-  #statsAnimationsContainer .statAnimationSegment {
-    margin: 0 auto 4rem auto; }
-    #statsAnimationsContainer .statAnimationSegment:last-child {
-      margin: 0 auto; } }
-#statsAnimationsContainer .statsAnimation {
+  .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statAnimationSegment {
+    margin: 0 auto 4rem auto;
+  }
+  .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statAnimationSegment:last-child {
+    margin: 0 auto;
+  }
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation {
   position: relative;
   width: 250px;
   height: auto;
-  margin: 0 auto; }
-  #statsAnimationsContainer .statsAnimation .statsText, #statsAnimationsContainer .statsAnimation .statsSubText {
-    opacity: 0; }
-    #statsAnimationsContainer .statsAnimation .statsText.opaAnimText, #statsAnimationsContainer .statsAnimation .statsSubText.opaAnimText {
-      animation: opacityAnimation 1.2s forwards linear; }
-    #statsAnimationsContainer .statsAnimation .statsText p, #statsAnimationsContainer .statsAnimation .statsSubText p {
-      position: relative;
-      text-align: center; }
-  #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec, #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
-    fill: none;
-    stroke: #378dbd;
-    stroke-miterlimit: 10; }
-  #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
-    color: #0C234B; }
-    #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p {
-      margin: 0;
-      color: #0C234B;
-      font-size: 36px;
-      line-height: 43px; }
-      #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p strong, #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p strong {
-        font-size: 64px;
-        font-weight: bold;
-        line-height: 66px;
-        vertical-align: middle; }
-  #statsAnimationsContainer .statsAnimation .arcSvgAnim {
-    max-width: 115px; }
-    #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
-      fill: none;
-      stroke: #378dbd;
-      stroke-miterlimit: 10; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-0 {
-        transform: translate(83.2%, -12.6%) rotate(72deg);
-        -webkit-transform: translate(83.2%, -12.6%) rotate(72deg);
-        -moz-transform: translate(83.2%, -12.6%) rotate(72deg);
-        -o-transform: translate(83.2%, -12.6%) rotate(72deg); }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-0.fill {
-          animation: arcAnimation 0.000s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-1 {
-        transform: translate(39.6%, -19%) rotate(36deg);
-        -webkit-transform: translate(39.6%, -19%) rotate(36deg);
-        -moz-transform: translate(39.6%, -19%) rotate(36deg);
-        -o-transform: translate(39.6%, -19%) rotate(36deg); }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-1.fill {
-          animation: arcAnimation 0.07s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-2.fill {
-        animation: arcAnimation 0.21s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-3 {
-        transform: translate(-20%, 37.2%) rotate(-36deg);
-        -webkit-transform: translate(-20%, 37.2%) rotate(-36deg);
-        -moz-transform: translate(-20%, 37.2%) rotate(-36deg);
-        -o-transform: translate(-20%, 37.2%) rotate(-36deg); }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-3.fill {
-          animation: arcAnimation 0.28s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-4 {
-        transform: translate(-13%, 78.6%) rotate(-72deg);
-        -webkit-transform: translate(-13%, 78.6%) rotate(-72deg);
-        -moz-transform: translate(-13%, 78.6%) rotate(-72deg);
-        -o-transform: translate(-13%, 78.6%) rotate(-72deg); }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-4.fill {
-          animation: arcAnimation 0.35s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-5 {
-        transform: translate(18.2%, 108.2%) rotate(-108deg);
-        -webkit-transform: translate(18.2%, 108.2%) rotate(-108deg);
-        -moz-transform: translate(18.2%, 108.2%) rotate(-108deg);
-        -o-transform: translate(18.2%, 108.2%) rotate(-108deg); }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-5.fill {
-          animation: arcAnimation 0.42s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-6 {
-        transform: translate(62%, 114.6%) rotate(-144deg);
-        -webkit-transform: translate(62%, 114.6%) rotate(-144deg);
-        -moz-transform: translate(62%, 114.6%) rotate(-144deg);
-        -o-transform: translate(62%, 114.6%) rotate(-144deg); }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-6.fill {
-          animation: arcAnimation 0.49s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-7 {
-        transform: translate(101.6%, 95.6%) rotate(-180deg);
-        -webkit-transform: translate(101.6%, 95.6%) rotate(-180deg);
-        -moz-transform: translate(101.6%, 95.6%) rotate(-180deg);
-        -o-transform: translate(101.6%, 95.6%) rotate(-180deg); }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-7.fill {
-          animation: arcAnimation 0.56s forwards linear; }
-      #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-8 {
-        transform: translate(121.5%, 58.4%) rotate(-216deg);
-        -webkit-transform: translate(121.5%, 58.4%) rotate(-216deg);
-        -moz-transform: translate(121.5%, 58.4%) rotate(-216deg);
-        -o-transform: translate(121.5%, 58.4%) rotate(-216deg); }
-        #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.cls-8.fill {
-          animation: arcAnimation 0.63s forwards linear; }
-    #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
-      position: absolute;
-      top: 48px;
-      transform: translateY(-23px);
-      -webkit-transform: translateY(-23px);
-      -moz-transform: translateY(-23px);
-      -o-transform: translateY(-23px);
-      margin: 0 auto;
-      left: 0;
-      right: -32px;
-      width: 220px; }
-  #statsAnimationsContainer .statsAnimation .barSvgAnim {
-    max-width: 150px;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    text-align: auto; }
-    #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.cls-0.fill {
-      animation: arcAnimation 0.21s forwards linear; }
-    #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.cls-1.fill {
-      animation: arcAnimation 0.56s forwards linear; }
-    #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText {
-      position: relative;
-      margin: 4px auto 29px auto;
-      text-align: center;
-      width: 100%; }
-      @media (max-width: 991px) {
-        #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText {
-          margin: 4px auto 8px auto; } }
-
-#willIGradContainer {
+  margin: 0 auto;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .statsText, .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .statsSubText {
+  opacity: 0;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .statsText.opaAnimText, .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .statsSubText.opaAnimText {
+  animation: opacityAnimation 1.2s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .statsText p, .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .statsSubText p {
+  position: relative;
+  text-align: center;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec, .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
+  fill: none;
+  stroke: #378dbd;
+  stroke-miterlimit: 10;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.fillIE, .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fillIE {
+  fill: #378dbd !important;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText, .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
+  color: #0C234B;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p, .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p {
+  margin: 0;
+  color: #0C234B;
+  font-size: 36px;
+  line-height: 43px;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText p strong, .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText p strong {
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 66px;
+  vertical-align: middle;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim {
+  max-width: 115px;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec {
+  fill: none;
+  stroke: #378dbd;
+  stroke-miterlimit: 10;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fill.cls-0 {
+  animation: arcAnimation 0.000s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fill.cls-1 {
+  animation: arcAnimation 0.07s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fill.cls-2 {
+  animation: arcAnimation 0.21s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fill.cls-3 {
+  animation: arcAnimation 0.28s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fill.cls-4 {
+  animation: arcAnimation 0.35s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fill.cls-5 {
+  animation: arcAnimation 0.42s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fill.cls-6 {
+  animation: arcAnimation 0.49s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fill.cls-7 {
+  animation: arcAnimation 0.56s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim svg .arcsec.fill.cls-8 {
+  animation: arcAnimation 0.63s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .arcSvgAnim .statsText {
+  position: absolute;
+  top: 48px;
+  transform: translateY(-23px);
+  -webkit-transform: translateY(-23px);
+  -moz-transform: translateY(-23px);
+  -o-transform: translateY(-23px);
+  margin: 0 auto;
+  left: 0;
+  right: -32px;
+  width: 220px;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim {
+  max-width: 150px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: auto;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.cls-0.fill {
+  animation: arcAnimation 0.21s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.cls-1.fill {
+  animation: arcAnimation 0.56s forwards linear;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim svg .arcsec.cls-2.fillIE {
+  fill: none !important;
+}
+.page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText {
+  position: relative;
+  margin: 4px auto 29px auto;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .page-node-3067 .adm-section-content-pre #statsAnimationsContainer .statsAnimation .barSvgAnim .statsText {
+    margin: 4px auto 8px auto;
+  }
+}
+.page-node-3067 .adm-section-content {
+  background-image: url("/sites/admissions-dev.arizona.edu/files/TuitionSection_photo.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  position: relative;
+  /*
+  * >> Quicktab
+  */
+  /*
+  * >> Animation Content
+  */
+}
+.page-node-3067 .adm-section-content .container {
+  position: relative;
+  z-index: 1;
+}
+.page-node-3067 .adm-section-content:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  transition: top .5s 1s;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 32px 32px 0 32px;
+  border-color: #81D3EB transparent transparent transparent;
+}
+.page-node-3067 .adm-section-content:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  transition: transform .5s .75s;
+  transform-origin: top;
+  z-index: 0;
+}
+.page-node-3067 .adm-section-content .col-xs-12.col-md-8.col-lg-5 {
+  padding: 0px;
+  z-index: 1;
+}
+.page-node-3067 .adm-section-content .card {
+  border: none;
+  padding: 1.5rem;
+  margin: 0px;
+}
+.page-node-3067 .adm-section-content .padding-bottom-zero p {
+  margin-bottom: 0px;
+}
+.page-node-3067 .adm-section-content h2 {
+  margin: .5rem 0;
+}
+.page-node-3067 .adm-section-content .fees-by-residency {
+  margin: 1rem 0px;
+}
+.page-node-3067 .adm-section-content .inline-fee {
+  position: relative;
+  width: 50%;
+}
+.page-node-3067 .adm-section-content .inline-fee + .inline-fee {
+  border-left: 3px solid #fff;
+}
+.page-node-3067 .adm-section-content .inline-fee:first-of-type {
+  padding-right: 2rem;
+}
+.page-node-3067 .adm-section-content .inline-fee:last-of-type {
+  padding-left: 2rem;
+}
+.page-node-3067 .adm-section-content .find-scholarships {
+  position: relative;
+  padding: 1rem 2rem;
+  transition: color .2s;
+  border-top: 5px solid #fff;
+}
+.page-node-3067 .adm-section-content .find-scholarships:hover {
+  color: #81D3EB !important;
+}
+.page-node-3067 .adm-section-content .find-scholarships:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 20px;
+  height: 50px;
+  background-image: url("/sites/admissions-dev.arizona.edu/files/icon_money.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.page-node-3067 .adm-section-content .net-price-calculator-card {
+  border: 5px solid #E2E9EB;
+  margin-top: 3rem;
+}
+.page-node-3067 .adm-section-content .net-price-calculator-card .btn-default {
+  position: relative;
+  display: block;
+  padding: .75rem;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees {
+  background-color: rgba(12, 35, 75, 0.9);
+  padding: 1rem 0 0 0;
+  width: 41.66667%;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees #quicktabs-cost_aid_quicktab_tuition_fees {
+  display: flex;
+  align-items: center;
+  padding: 0 .75rem;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees .quicktabs-tabs {
+  background-color: transparent;
+  border: none;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees .quicktabs-tabs li {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  text-transform: none;
+  border: none;
+  font-size: 18px;
+  padding: 0;
+  cursor: pointer;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees .quicktabs-tabs li:before {
+  content: "";
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: 15px;
+  top: 49%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  transition: background-color .2s;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees .quicktabs-tabs li.active {
+  cursor: default;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees .quicktabs-tabs li.active:before {
+  background-color: #fff;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees .quicktabs-tabs li.active:hover a {
+  color: #fff;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees .quicktabs-tabs li:hover a {
+  background-color: transparent;
+  color: #81D3EB;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees .quicktabs-tabs a {
+  display: block;
+  color: #fff;
+  text-align: left;
+  background-color: transparent;
+  padding: 0.35rem 1rem .35rem 2.5rem;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees .item-list {
+  width: 50%;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees #quicktabs-container-cost_aid_quicktab_tuition_fees {
+  background-color: #81D3EB;
+  margin-left: 2rem;
+}
+.page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees #quicktabs-container-cost_aid_quicktab_tuition_fees p {
+  color: #0C234B;
+  margin: 0px;
+  padding: .25rem 1rem;
+}
+.page-node-3067 .adm-section-content #block-bean-cost-aid-freshmen-tuition-2 {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform .5s .75s;
+}
+.page-node-3067 .adm-section-content .tuition-and-fees-animation-content {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.page-node-3067 .adm-section-content .tuition-and-fees-animation-content .center-icon {
+  position: relative;
+  display: block;
+  margin: 0px auto;
+}
+.page-node-3067 .adm-section-content.active:before {
+  top: 100%;
+}
+.page-node-3067 .adm-section-content.active:after {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+.page-node-3067 .adm-section-content.active #block-bean-cost-aid-freshmen-tuition-2 {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+.page-node-3067 .adm-section-content-post {
+  padding: 5rem 0;
+}
+.page-node-3067 .adm-section-content-post h2 {
+  margin-bottom: 3rem;
+}
+.page-node-3067 .adm-section-content-post .scholarship-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  width: 33.33%;
+  padding: 2rem 3.5rem;
+  border: 4px solid #dcdcdc;
+}
+.page-node-3067 .adm-section-content-post .scholarship-card:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  width: 30px;
+  height: 80px;
+  background-image: url("/sites/admissions-dev.arizona.edu/files/icon_money.png");
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.page-node-3067 .adm-section-content-post .scholarship-card + .scholarship-card {
+  margin-left: 30px;
+}
+.page-node-3067 .adm-section-content-post .scholarship-title {
+  margin: .5em 0;
+}
+.page-node-3067 .adm-section-content-post .scholarship-details {
+  position: relative;
+  max-width: 200px;
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+.page-node-3067 .adm-section-content-post .scholarship-details:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: #1e5288;
+}
+.page-node-3067 .adm-section-content-post .scholarships-extra-info {
+  margin: 2rem auto;
+  max-width: 645px;
+}
+.page-node-3067 .adm-section-content-post .scholarships-learn-more {
+  margin: 2rem auto 0;
+  max-width: 350px;
+}
+.page-node-3067 .region-full-width-content-bottom {
+  position: relative;
+}
+.page-node-3067 .region-full-width-content-bottom:before, .page-node-3067 .region-full-width-content-bottom:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+.page-node-3067 .region-full-width-content-bottom:before {
+  left: 0px;
+  background-image: url("/sites/admissions-dev.arizona.edu/files/AZBestBuy_bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.page-node-3067 .region-full-width-content-bottom:after {
+  right: 0px;
+  background-color: rgba(55, 141, 189, 0.08);
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .arizona-best-buy-section {
+  padding: 4rem;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy div[class*="col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .flex-left {
+  align-items: flex-start !important;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .border-oasis {
+  border-bottom: 5px solid #378DBD;
+  padding-bottom: .75rem;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .card {
+  padding: 80px;
+  margin: 0px;
+  border: none;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .card:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .arizona-best-buy-pricing {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .arizona-best-buy-pricing .flex-column {
+  width: 50%;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .arizona-best-buy-pricing .flex-column:nth-of-type(odd) {
+  padding: 0 1rem 0 0;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .arizona-best-buy-pricing .flex-column:nth-of-type(even) {
+  padding: 0 0 0 1rem;
+  border-left: 2px solid #EF4056;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .large-number {
+  font-size: 5em;
+  line-height: 1em;
+}
+.page-node-3067 .region-full-width-content-bottom .arizona-best-buy .large-number-description {
+  margin: 0;
+}
+.page-node-3067 .adm-section-content-bottom-pre {
+  background-image: url("/sites/admissions-dev.arizona.edu/files/TypesAid_photo.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 5rem 0;
+}
+.page-node-3067 .adm-section-content-bottom-pre .region-content-bottom-prescript {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-bean-cost-aid-freshmen-types-of-a, .page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 41.66667%;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-bean-cost-aid-freshmen-types-of-a {
+  padding: 2rem 2rem 0 2rem;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types {
+  padding: 0rem 2rem 2rem 2rem;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .item-list, .page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types #quicktabs-container-cost_aid_freshmen_quicktab_types {
+  display: inline-block;
+  position: relative;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .item-list {
+  width: 40%;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types #quicktabs-container-cost_aid_freshmen_quicktab_types {
+  width: 60%;
+  min-height: 250px;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types #quicktabs-cost_aid_freshmen_quicktab_types {
+  display: flex;
+  align-items: flex-start;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .quicktabs-tabs {
+  background-color: transparent;
+  border: none;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .quicktabs-tabs li {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  text-transform: none;
+  border: none;
+  font-size: 18px;
+  padding: 0;
+  cursor: pointer;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .quicktabs-tabs li:before {
+  content: "";
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  top: 49%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: 3px solid #1e5288;
+  border-radius: 50%;
+  transition: background-color .2s;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .quicktabs-tabs li.active {
+  cursor: default;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .quicktabs-tabs li.active:before {
+  background-color: #1e5288;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .quicktabs-tabs li.active:hover a {
+  color: #0C234B;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .quicktabs-tabs li:hover a {
+  background-color: transparent;
+  color: #378DBD;
+}
+.page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types .quicktabs-tabs a {
+  display: block;
+  color: #0C234B;
+  text-align: left;
+  background-color: transparent;
+  padding: 0.35rem 1rem .35rem 1.5rem;
+}
+.page-node-3067 .adm-section-content-bottom {
+  background-color: rgba(55, 141, 189, 0.08);
+  padding: 5rem 0;
+}
+.page-node-3067 .adm-section-content-bottom .income-graphic {
+  margin: 1rem 0;
+}
+@keyframes statSlideUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -110%;
+  }
+}
+@keyframes statSlideDown {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -110%;
+  }
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer {
   position: relative;
   margin: 0 auto;
-  float: none; }
-  #willIGradContainer .willIGradArrowRow {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: 66.666%;
-    margin: 0 auto; }
-    @media (max-width: 991px) {
-      #willIGradContainer .willIGradArrowRow {
-        flex-direction: column-reverse;
-        width: 100%; } }
-    @media (max-width: 991px) {
-      #willIGradContainer .willIGradArrowRow#willIGradArrowRowDown {
-        flex-direction: column !important; } }
-    #willIGradContainer .willIGradArrowRow#willIGradArrowRowDown .mainTextContainer {
-      margin-top: 3rem; }
-      @media (max-width: 991px) {
-        #willIGradContainer .willIGradArrowRow#willIGradArrowRowDown .mainTextContainer {
-          margin-top: 1rem; } }
-    #willIGradContainer .willIGradArrowRow .willIGradArrowArea {
-      position: relative;
-      overflow: hidden;
-      height: auto;
-      background-color: #eff6fa; }
-      #willIGradContainer .willIGradArrowRow .willIGradArrowArea .willIGradSlide {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        background: #eff6fa;
-        z-index: 5; }
-      #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer {
-        position: relative;
-        display: block;
-        margin: 0 auto; }
-        #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow {
-          width: 115px;
-          height: 145px;
-          margin: 0 auto;
-          display: block;
-          position: relative; }
-          #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow:before {
-            content: '';
-            border-left: 90px solid transparent;
-            border-right: 90px solid transparent;
-            position: absolute;
-            margin: 0 auto;
-            left: -33px;
-            right: 0;
-            width: 90px; }
-          #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow .arrowText, #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow .arrowMainText {
-            display: block;
-            position: absolute;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            font-size: 48px;
-            font-weight: bold;
-            line-height: 57px;
-            text-align: center; }
-          #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow .arrowText {
-            color: #ffffff; }
-          #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow .arrowMainText {
-            background-color: #eff6fa; }
-    #willIGradContainer .willIGradArrowRow .mainTextContainer {
-      flex-grow: 1; }
-    #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .willIGradSlide {
-      top: 0; }
-      #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .willIGradSlide.opaAnimText {
-        animation: statSlideUp 1.2s forwards linear; }
-    #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .arrowContainer .willIgradArrow {
-      background-color: #1E5288;
-      margin: 90px auto 0 auto; }
-      #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .arrowContainer .willIgradArrow:before {
-        border-bottom: 90px solid #1E5288;
-        top: -90px; }
-      #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .arrowContainer .willIgradArrow .arrowText {
-        left: 0;
-        bottom: 83px; }
-      #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .arrowContainer .willIgradArrow .arrowMainText {
-        color: #1E5288;
-        bottom: 26px;
-        left: -60px; }
-    #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .willIGradSlide {
-      bottom: 0; }
-      #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .willIGradSlide.opaAnimText {
-        animation: statSlideDown 1.2s forwards linear; }
-    #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .arrowContainer .willIgradArrow {
-      background-color: #AB0520;
-      margin: 0 auto 90px auto; }
-      #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .arrowContainer .willIgradArrow:before {
-        border-top: 90px solid #AB0520;
-        bottom: -90px; }
-      #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .arrowContainer .willIgradArrow .arrowText {
-        top: 5px; }
-      #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .arrowContainer .willIgradArrow .arrowMainText {
-        color: #AB0520;
-        top: 65px;
-        left: -31px; }
-  #willIGradContainer .verySpecialHrRow {
+  float: none;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 66.666%;
+  margin: 0 auto;
+}
+@media (max-width: 991px) {
+  .page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow#willIGradArrowRowDown {
+    flex-direction: column !important;
+  }
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow#willIGradArrowRowDown .mainTextContainer {
+  margin-top: 3rem;
+}
+@media (max-width: 991px) {
+  .page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow#willIGradArrowRowDown .mainTextContainer {
+    margin-top: 1rem;
+  }
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .willIGradArrowArea {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  background-color: #eff6fa;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .willIGradArrowArea .willIGradSlide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #eff6fa;
+  z-index: 5;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow {
+  width: 115px;
+  height: 145px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow:before {
+  content: '';
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  position: absolute;
+  margin: 0 auto;
+  left: -33px;
+  right: 0;
+  width: 90px;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow .arrowText, .page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow .arrowMainText {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 57px;
+  text-align: center;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow .arrowText {
+  color: #ffffff;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .willIGradArrowArea .arrowContainer .willIgradArrow .arrowMainText {
+  background-color: #eff6fa;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow .mainTextContainer {
+  flex-grow: 1;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .willIGradSlide {
+  top: 0;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .willIGradSlide.opaAnimText {
+  animation: statSlideUp 1.2s forwards linear;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .arrowContainer .willIgradArrow {
+  background-color: #1E5288;
+  margin: 90px auto 0 auto;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .arrowContainer .willIgradArrow:before {
+  border-bottom: 90px solid #1E5288;
+  top: -90px;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .arrowContainer .willIgradArrow .arrowText {
+  left: 0;
+  bottom: 83px;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaUp.willIGradArrowArea .arrowContainer .willIgradArrow .arrowMainText {
+  color: #1E5288;
+  bottom: 26px;
+  left: -60px;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .willIGradSlide {
+  bottom: 0;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .willIGradSlide.opaAnimText {
+  animation: statSlideDown 1.2s forwards linear;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .arrowContainer .willIgradArrow {
+  background-color: #AB0520;
+  margin: 0 auto 90px auto;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .arrowContainer .willIgradArrow:before {
+  border-top: 90px solid #AB0520;
+  bottom: -90px;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .arrowContainer .willIgradArrow .arrowText {
+  top: 5px;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .willIGradArrowRow #willIGradAreaDown.willIGradArrowArea .arrowContainer .willIgradArrow .arrowMainText {
+  color: #AB0520;
+  top: 65px;
+  left: -31px;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .verySpecialHrRow {
+  position: relative;
+  height: 2px;
+  line-height: 0;
+  margin: 0 auto;
+  width: 66.666%;
+}
+@media (max-width: 991px) {
+  .page-node-3067 .adm-section-content-bottom #willIGradContainer .verySpecialHrRow {
+    width: 100%;
+  }
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .verySpecialHrRow .verySpecialHr {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 2px dashed #000000;
+}
+@media (max-width: 991px) {
+  .page-node-3067 .adm-section-content-bottom #willIGradContainer .verySpecialHrRow .verySpecialHr {
+    display: none;
+    width: 100%;
+    float: right;
+    right: 140px;
+  }
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .verySpecialHrRow .verySpecialHrText {
+  display: block;
+  position: relative;
+  line-height: 0;
+  font-size: 20px;
+  padding-left: 1.3rem;
+  font-style: italic;
+}
+@media (max-width: 991px) {
+  .page-node-3067 .adm-section-content-bottom #willIGradContainer .verySpecialHrRow .verySpecialHrText {
+    display: none;
+    position: absolute;
+    right: 0;
+  }
+}
+@media (max-width: 991px) {
+  .page-node-3067 .adm-section-content-bottom #willIGradContainer .verySpecialHrRow .verySpecialHrText span {
+    position: absolute;
+    right: 0;
+  }
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .mainTextContainer {
+  margin-top: 2rem;
+  padding-left: 1.4rem;
+}
+.page-node-3067 .adm-section-content-bottom #willIGradContainer .top-buffer-xs-50 {
+  margin-top: 50px;
+}
+@media (max-width: 991px) {
+  .page-node-3067 .adm-section-content-bottom #willIGradContainer .top-buffer-xs-50 .col-xs-12 {
+    text-align: left;
+  }
+}
+.page-node-3067 .adm-section-content-bottom-post {
+  padding: 5rem 0;
+}
+.page-node-3067 .adm-section-content-bottom-post .piggy-bank-icon-wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+.page-node-3067 .adm-section-content-bottom-post .piggy-bank-icon-wrap:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 20%;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: #378DBD;
+  z-index: -1;
+}
+.page-node-3067 .adm-section-content-bottom-post h2 {
+  margin: .5em 0px;
+}
+.page-node-3067 .adm-section-content-bottom-post .funding-card {
+  padding: 2rem 0;
+}
+.page-node-3067 .adm-section-content-bottom-post .flex-wrap div[class*="col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+}
+.page-node-3067 .adm-section-content-bottom-post .flex-wrap .flex-column {
+  flex-direction: column;
+}
+.page-node-3067 .adm-section-footer-pre {
+  padding: 5rem 0px;
+  background-color: #0C234B;
+}
+.page-node-3067 .flex-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-node-3067 .padding-bottom-zero {
+  padding-bottom: 0px !important;
+}
+.page-node-3067 .display-block {
+  display: block;
+}
+.page-node-3067 .btn-ext-white:after {
+  content: "\0020";
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid #fff;
+  border-right: 10px solid #fff;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.page-node-3067 .text-transform-none {
+  text-transform: none;
+}
+.page-node-3067 .btn-hollow.red-wedge:after {
+  right: 2px;
+}
+.page-node-3067 .white-wedge {
+  position: relative;
+  padding-right: 1em;
+}
+.page-node-3067 .white-wedge:after {
+  content: "\0020";
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  width: 0px;
+  height: 0px;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+/*
+* > MEDIA QUERIES
+*/
+.page-node-3067 {
+  /*
+  * >> @1199px
+  */
+  /*
+  * >> @991px
+  */
+  /*
+  * >> @768px
+  */
+  /*
+  * >> @730px
+  */
+}
+@media screen and (max-width: 1199px) {
+  .page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees {
+    width: 66.66667%;
+  }
+  .page-node-3067 .adm-section-content-bottom-pre #block-bean-cost-aid-freshmen-types-of-a, .page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types {
+    width: 66.66667%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .page-node-3067 .adm-section-content-pre {
+    padding: 2rem 0;
+  }
+  .page-node-3067 .adm-section-content-pre .stat-item {
+    margin: 2rem 0;
+  }
+  .page-node-3067 .adm-section-content-pre .stat {
+    margin: 0px auto;
+  }
+  .page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees {
+    width: 100%;
+  }
+  .page-node-3067 .adm-section-content #block-bean-cost-aid-freshmen-tuition-2, .page-node-3067 .adm-section-content .tuition-and-fees-animation-content {
     position: relative;
-    height: 2px;
-    line-height: 0;
-    margin: 0 auto;
-    width: 66.666%; }
-    @media (max-width: 991px) {
-      #willIGradContainer .verySpecialHrRow {
-        width: 100%; } }
-    #willIGradContainer .verySpecialHrRow .verySpecialHr {
-      position: relative;
-      vertical-align: middle;
-      border-bottom: 2px dashed #000000; }
-      @media (max-width: 991px) {
-        #willIGradContainer .verySpecialHrRow .verySpecialHr {
-          display: none;
-          width: 100%;
-          float: right;
-          right: 140px; } }
-    #willIGradContainer .verySpecialHrRow .verySpecialHrText {
-      display: block;
-      position: relative;
-      line-height: 0;
-      font-size: 20px;
-      padding-left: 1.3rem;
-      font-style: italic; }
-      @media (max-width: 991px) {
-        #willIGradContainer .verySpecialHrRow .verySpecialHrText {
-          display: none;
-          position: absolute;
-          right: 0; } }
-      @media (max-width: 991px) {
-        #willIGradContainer .verySpecialHrRow .verySpecialHrText span {
-          position: absolute;
-          right: 0; } }
-  #willIGradContainer .mainTextContainer {
-    margin-top: 2rem;
-    padding-left: 1.4rem; }
-  #willIGradContainer .top-buffer-xs-50 {
-    margin-top: 50px; }
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  .page-node-3067 .adm-section-content #block-bean-cost-aid-freshmen-tuition-2 {
+    background-image: url("/sites/admissions-dev.arizona.edu/files/mobile_tuition_fees.jpg");
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+  }
+  .page-node-3067 .adm-section-content #block-bean-cost-aid-freshmen-tuition-2:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+  }
+  .page-node-3067 .adm-section-content .tuition-and-fees-animation-content {
+    -webkit-transform: none;
+    transform: none;
+    padding: 3rem 1.5rem;
+  }
+  .page-node-3067 .adm-section-content .card.bg-blue-transparent, .page-node-3067 .adm-section-content #block-quicktabs-cost-aid-quicktab-tuition-fees {
+    background-color: #0C234B;
+  }
+  .page-node-3067 .adm-section-content #block-bean-cost-aid-freshmen-tuition-f:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    transition: top .5s 1s;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 32px 32px 0 32px;
+    border-color: #81D3EB transparent transparent transparent;
+    z-index: 2;
+  }
+  .page-node-3067 .adm-section-content .card.bg-blue-transparent {
+    padding: 3rem 1.5rem;
+  }
+  .page-node-3067 .adm-section-content .net-price-calculator-card {
+    border: none;
+    margin-top: 0px;
+    padding: 3rem 1.5rem;
+  }
+  .page-node-3067 .adm-section-content-bottom-pre #block-bean-cost-aid-freshmen-types-of-a, .page-node-3067 .adm-section-content-bottom-pre #block-quicktabs-cost-aid-freshmen-quicktab-types {
+    width: 100%;
+  }
+  .page-node-3067 .adm-section-content-post .flex-wrap {
+    flex-direction: column;
+  }
+  .page-node-3067 .adm-section-content-post .scholarship-card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .page-node-3067 .adm-section-content-post .scholarship-card + .scholarship-card {
+    margin-left: 0px;
+  }
+  .page-node-3067 .region-full-width-content-bottom:before, .page-node-3067 .region-full-width-content-bottom:after {
+    width: 100%;
+    height: 50%;
+    left: 0px;
+  }
+  .page-node-3067 .region-full-width-content-bottom:after {
+    top: 50%;
+    right: auto;
+  }
+  .page-node-3067 .region-full-width-content-bottom .arizona-best-buy > .flex-wrap {
+    flex-direction: column;
+  }
+  .page-node-3067 .region-full-width-content-bottom .arizona-best-buy .arizona-best-buy-section {
+    padding: 4rem 0;
+  }
+  .page-node-3067 .region-full-width-content-bottom .arizona-best-buy .arizona-best-buy-section:last-of-type {
+    padding: 4rem 3rem;
+  }
+  .page-node-3067 .adm-section-content-bottom-post .flex-wrap {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-node-3067 .adm-section-content-top {
+    background-image: url("/sites/admissions-dev.arizona.edu/files/mobile_hero.jpg");
+    padding: 3rem 0;
+  }
+  .page-node-3067 .adm-section-content {
+    padding: 3rem 0;
+  }
+  .page-node-3067 .adm-section-content-post {
+    padding: 0;
+  }
+  .page-node-3067 .adm-section-content-bottom-pre {
+    background-image: url("/sites/admissions-dev.arizona.edu/files/mobile_types_of_aid.jpg");
+    padding: 3rem 0;
+  }
+  .page-node-3067 .adm-section-content-bottom {
+    padding: 2rem 0;
+  }
+  .page-node-3067 .adm-section-content-bottom-post {
+    padding: 2rem 0;
+  }
+  .page-node-3067 .adm-section-footer-pre {
+    padding: 2rem 0;
+  }
+}
+@media screen and (max-width: 752px) {
+  .page-node-3067 .adm-section-content {
+    background: none;
+    padding: 0px;
+  }
+  .page-node-3067 .adm-section-content > .container {
+    padding: 0px;
+  }
+  .page-node-3067 .adm-section-content:before, .page-node-3067 .adm-section-content:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 730px) {
+  .page-node-3067 .region-full-width-content-bottom:before, .page-node-3067 .region-full-width-content-bottom:after {
+    display: none;
+  }
+  .page-node-3067 .region-full-width-content-bottom .arizona-best-buy-section:first-of-type {
+    background-image: url("/sites/admissions-dev.arizona.edu/files/AZBestBuy_bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .page-node-3067 .region-full-width-content-bottom .arizona-best-buy-section:last-of-type {
+    background-color: rgba(55, 141, 189, 0.08);
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

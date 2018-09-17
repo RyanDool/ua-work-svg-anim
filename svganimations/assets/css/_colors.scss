@@ -1,0 +1,99 @@
+/*
+* > COLORS
+*/
+$midnight: #001C48;
+$az_blue: #0C234B;
+$azurite: #1e5288;
+$oasis: #378DBD;
+$sky: #81D3EB;
+
+$chili: #8B0015;
+$az_red: #ab0520;
+$bloom: #EF4056;
+
+
+$river: #007d84;
+$leaf: #70B865;
+$silver: #9EABAE;
+$mesa: #a95c42;
+
+$ash: #403635;
+$cool_grey: #E2E9EB;
+$warm_grey: #F4EDE5;
+
+
+
+/*
+* > TEXT COLORS
+*/
+.text-white {
+	color: white;
+}
+.text-blue {
+	color: $az_blue;
+}
+.text-red {
+	color: $az_red;
+}
+
+
+.text-midnight {
+	color: $midnight;
+}
+.text-azurite {
+	color: $azurite;
+}
+.text-oasis {
+	color: $oasis;
+}
+.text-sky {
+	color: $sky;
+}
+
+
+
+
+/*
+* > TEXT ALIGNMENT & TRANSFORMATIONS
+*/
+.text-center {
+	text-align: center;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-thin {
+	font-weight: 400;
+}
+
+
+
+/*
+* > BACKGROUND COLORS
+*/
+.bg-blue {
+	background-color: $az_blue;
+}
+.bg-blue-transparent {
+	background-color: rgba($az_blue, .9);
+}
+.bg-white {
+	background-color: #fff;
+}
+.bg-white-transparent {
+	background-color: rgba(#fff, .9);
+}
+
+.bg-oasis-transparent {
+	background-color: rgba($oasis, .08);
+}
+
+
+
+/*
+* > BORDERS
+*/
+.border-oasis {
+	border-bottom: 5px solid $oasis;
+}

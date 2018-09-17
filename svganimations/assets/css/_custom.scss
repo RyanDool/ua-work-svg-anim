@@ -1,0 +1,1399 @@
+
+.page-node-3067 {
+	#main:after {
+		display: none;
+	}
+	/*
+	* > HERO SECTION
+	*/
+	.adm-section-content-top {
+		background-image: url("/sites/admissions-dev.arizona.edu/files/Hero_banner_CostAid.jpg");
+	    background-size: cover;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    
+	    padding: 6rem 0;
+
+	    h1 {
+	    	margin: 0px;
+	    }
+	    h2 {
+	    	margin-top: 1.5rem;
+	    }
+	}
+
+
+
+	/*
+	* > STATS SECTION
+	*/
+	@mixin keyframes($animationName) {
+		@-webkit-keyframes #{$animationName} {
+			@content;
+		}
+		@-moz-keyframes #{$animationName} {
+			@content;
+		}
+		@-o-keyframes #{$animationName} {
+			@content;
+		}
+		@keyframes #{$animationName} {
+			@content;
+		}
+	}
+	.adm-section-content-pre {
+		background-color: rgba($oasis, .08);
+	    padding: 8rem 0;
+
+	    .stat {
+	    	display: block;
+	    	margin: 1rem auto 0px;
+	    	max-width: 245px;
+	    }
+	    @keyframes opacityAnimation{
+	    	0%{opacity:0;}
+	    	30%{opacity:0;}
+	    	80%{opacity:1;}
+	    	100%{opacity:1;}
+	    }
+	    @keyframes arcAnimation{
+	    	99%{fill:none;}
+	    	100%{fill:#378dbd;}
+	    }
+	    #statsAnimationsContainer{
+	    	.statAnimationSegment{
+	    		@media(max-width:991px){
+	    			margin:0 auto 4rem auto;
+	    			&:last-child{
+	    				margin: 0 auto;
+	    			}
+	    		}
+	    	}
+	    	.statsAnimation{
+	    		position:relative;
+	    		width:250px;
+	    		height:auto;
+	    		margin:0 auto;
+	    		.statsText, .statsSubText{
+	    			opacity:0;
+	    			&.opaAnimText{
+	    				animation:opacityAnimation 1.2s forwards linear; 
+	    			}
+	    			p{
+	    				position:relative;
+	    				text-align:center;
+	    			}
+	    		}
+	    		.barSvgAnim, .arcSvgAnim{
+	    			svg{
+	    				.arcsec{
+	    					fill:none;
+	    					stroke:#378dbd;
+	    					stroke-miterlimit:10;
+	    					&.fillIE{
+	    						fill:#378dbd !important;
+	    					}
+	    				}
+	    			}
+	    			.statsText{
+	    				color:#0C234B;
+	    				p{
+	    					margin:0;
+	    					color:#0C234B;
+	    					font-size:36px;
+	    					line-height:43px;
+	    					strong{
+	    						font-size:64px;
+	    						font-weight:bold;
+	    						line-height:66px;
+	    						vertical-align:middle;
+	    					}
+	    				}
+	    			}
+	    		}
+	    		.arcSvgAnim{
+	    			max-width:115px;
+	    			svg{
+	    				.arcsec{
+	    					fill:none;
+	    					stroke:#378dbd;
+	    					stroke-miterlimit:10;
+	    					&.fill{
+	    						&.cls-0{
+	    							animation:arcAnimation 0.000s forwards linear; 
+	    						}
+	    						&.cls-1{
+	    							animation:arcAnimation 0.07s forwards linear; 
+	    						}
+	    						&.cls-2{
+	    							animation:arcAnimation 0.21s forwards linear; 
+	    						}
+	    						&.cls-3{
+	    							animation:arcAnimation 0.28s forwards linear; 
+	    						}
+	    						&.cls-4{
+	    							animation:arcAnimation 0.35s forwards linear; 
+	    						}
+	    						&.cls-5{
+	    							animation:arcAnimation 0.42s forwards linear; 
+	    						}
+	    						&.cls-6{
+	    							animation:arcAnimation 0.49s forwards linear; 
+	    						}
+	    						&.cls-7{
+	    							animation:arcAnimation 0.56s forwards linear; 
+	    						}
+	    						&.cls-8{
+	    							animation:arcAnimation 0.63s forwards linear; 
+	    						}
+	    					}
+	    				}
+	    			}
+	    			.statsText{
+	    				position:absolute;
+	    				top:48px;
+	    				transform:translateY(-23px);
+	    				-webkit-transform:translateY(-23px);
+	    				-moz-transform:translateY(-23px);
+	    				-o-transform:translateY(-23px);
+	    				margin:0 auto;
+	    				left:0;
+	    				right:-32px;
+	    				width:220px;
+	    			}
+	    		}
+	    		.barSvgAnim{
+	    			max-width:150px;
+	    			position:relative;
+	    			display:block;
+	    			margin:0 auto;
+	    			text-align:auto;
+	    			svg{
+	    				.arcsec{
+	    					&.cls-0.fill{
+	    						animation:arcAnimation 0.21s forwards linear; 
+	    					}
+	    					&.cls-1.fill{
+	    						animation:arcAnimation 0.56s forwards linear; 
+	    					}
+	    					&.cls-2.fillIE{
+	    						fill:none !important;
+	    					}
+	    				}
+	    			}
+	    			.statsText{
+	    				position:relative;
+	    				margin:4px auto 29px auto;
+	    				text-align:center;
+	    				width:100%;
+	    				@media(max-width:991px){
+	    					margin:4px auto 8px auto;
+	    				}				
+	    			}
+	    		}
+	    	}
+	    }
+	}
+
+
+	/*
+	* > CONTENT BODY - Tuition & Fees Section
+	*/
+	.adm-section-content {
+		background-image: url("/sites/admissions-dev.arizona.edu/files/TuitionSection_photo.jpg");
+	    background-size: cover;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    
+	    padding: 6rem 0;
+	    position: relative;
+
+	    // place container on top of pseudo element
+	    .container {
+	    	position: relative;
+	    	z-index: 1;
+	    }
+
+	    // >> Triangle Pseudo
+	    &:before {
+	    	content: "";
+	    	position: absolute;
+	    	top: 0%;
+	    	left: 50%;
+	    	-webkit-transform: translateX(-50%);
+	    			transform: translateX(-50%);
+			transition: top .5s 1s;
+
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 32px 32px 0 32px;
+			border-color: $sky transparent transparent transparent;
+	    }
+
+	    &:after {
+	    	content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(#ffffff, .75);
+
+			-webkit-transform: scaleY(0);
+					transform: scaleY(0);
+			transition: transform .5s .75s;
+			transform-origin: top;
+
+			z-index: 0;
+	    }
+
+	    .col-xs-12.col-md-8.col-lg-5 {
+	    	padding: 0px;
+	    	z-index: 1;
+	    }
+
+	    .card {
+	    	border: none;
+	    	padding: 1.5rem;
+	    	margin: 0px;
+
+	    }
+	    .padding-bottom-zero {
+	    	p {
+	    		margin-bottom: 0px;
+	    	}
+	    }
+
+	    h2 {
+	    	margin: .5rem 0;
+	    }
+		.fees-by-residency {
+			margin: 1rem 0px;
+		}
+	    .inline-fee {
+	    	position: relative;
+	    	width: 50%;
+
+	    	& + .inline-fee {
+	    		border-left: 3px solid #fff;
+	    	}
+
+	    	&:first-of-type {
+	    		padding-right: 2rem;
+	    	}
+	    	&:last-of-type {
+	    		padding-left: 2rem;
+	    	}
+	    }
+
+	    .find-scholarships {
+	    	position: relative;
+	    	padding: 1rem 2rem;
+
+	    	transition: color .2s;
+	    	border-top: 5px solid #fff;
+
+	    	&:hover {
+	    		color: $sky !important;
+	    	}
+
+	    	&:before {
+	    		content: "";
+	    		display: inline-block;
+
+	    		position: absolute;
+	    		left: 0px;
+	    		top: 0px;
+	    
+	    		width: 20px;
+	    		height: 50px;
+	    		background: {
+	    			image: url("/sites/admissions-dev.arizona.edu/files/icon_money.png");
+	    			size: contain;
+	    			position: center center;
+	    			repeat: no-repeat;
+	    		}
+
+	    	}
+	    }
+
+	    .net-price-calculator-card {
+	    	border: 5px solid $cool_grey;
+	    	margin-top: 3rem;
+	    	.btn-default {
+		    	position: relative;
+		    	display: block;
+
+		    	padding: .75rem;
+	    	}
+	    }
+
+
+	    /*
+	    * >> Quicktab
+	    */
+	    #block-quicktabs-cost-aid-quicktab-tuition-fees {
+
+	    	background-color: rgba($az_blue, .9);
+	    	padding: 1rem 0 0 0;
+	    	width: 41.66667%;
+
+	    	#quicktabs-cost_aid_quicktab_tuition_fees {
+		    	display: flex;
+		    	align-items: center;
+		    	padding: 0 .75rem;
+	    	}
+
+	    	.quicktabs-tabs {
+	    		background-color: transparent;
+	    		border: none;
+
+	    	
+	    		li {
+	    			-webkit-box-sizing: border-box;
+							box-sizing: border-box;
+	    			display: block;
+	    			width: 100%;
+	    			text-transform: none;
+	    			border: none;
+	    			// .text-size-h4 font sizing
+	    			font-size: 18px;
+	    			padding: 0;
+	    			cursor: pointer;
+
+	    			&:before {
+	    				content: "";
+	    				-webkit-box-sizing: border-box;
+	    						box-sizing: border-box;
+
+						position: absolute;
+						left: 15px;
+						top: 49%;
+						-webkit-transform: translateY(-50%);
+								transform: translateY(-50%);
+						width: 15px;
+						height: 15px;
+						border: 3px solid #fff;
+						border-radius: 50%;
+
+						transition: background-color .2s;
+	    			}
+
+	    			&.active {
+	    				cursor: default;
+	    				&:before {
+	    					background-color: #fff;
+	    				}
+	    				&:hover {
+	    					a {
+	    						color: #fff;
+	    					}
+	    				}
+	    			}
+
+	    			&:hover {
+	    				a {
+		    				background-color: transparent;
+		    				color: $sky;
+	    				}
+	    			}
+	    		}
+
+	    		a {
+	    			display: block;
+	    			color: #fff;
+	    			text-align: left;
+    				background-color: transparent;
+    				padding: 0.35rem 1rem .35rem 2.5rem;
+	    		}
+	    	}
+			
+			.item-list {
+				width: 50%;
+			}
+
+			#quicktabs-container-cost_aid_quicktab_tuition_fees {
+				background-color: $sky;
+				margin-left: 2rem;
+
+				p {
+					color: $az_blue;
+					margin: 0px;
+					padding: .25rem 1rem;
+				}
+			}
+	    }
+
+		
+		/*
+		* >> Animation Content
+		*/
+		// make parent absolute, cover entire grandparent
+		#block-bean-cost-aid-freshmen-tuition-2 {
+			display: block;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+
+			width: 100%;
+			height: 100%;
+			-webkit-transform: scaleY(0);
+					transform: scaleY(0);
+			transform-origin: top;
+			transition: transform .5s .75s;
+		}
+		// make child absolute as well
+		.tuition-and-fees-animation-content {
+			display: block;
+			position: absolute;
+			right: 0px;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+
+
+			.center-icon {
+				position: relative;
+				display: block;
+				margin: 0px auto;
+			}
+		}
+
+	    &.active {
+	    	// move triangle outside the parent container
+	    	&:before {
+				top: 100%;
+	    	}
+	    	// show the white background
+	    	&:after {
+	    		-webkit-transform: scaleY(1);
+	    				transform: scaleY(1);
+	    	}
+
+	    	// show content over white background
+	    	#block-bean-cost-aid-freshmen-tuition-2 {
+	    		-webkit-transform: scaleY(1);
+	    				transform: scaleY(1);
+	    	}
+	    }
+	}
+
+
+
+
+	
+
+	/*
+	* > CONTENT POSTSCRIPS - Scholarships Section
+	*/
+	.adm-section-content-post {
+	    padding: 5rem 0;
+
+	    h2 {
+	    	margin-bottom: 3rem;
+	    }
+
+	   	.scholarship-card {
+	   		position: relative;
+	   		display: flex;
+	   		flex-direction: column;
+	   		align-items: center;
+	   		justify-content: flex-start;
+	   		align-self: stretch;
+
+	   		width: 33.33%;
+	   		padding: 2rem 3.5rem;
+	   		border: 4px solid #dcdcdc;
+
+	   		&:before {
+	   			content: "";
+	   			position: absolute;
+	   			top: 0px;
+	   			left: 30px;
+
+	   			width: 30px;
+	   			height: 80px;
+	   			background: {
+	   				image: url("/sites/admissions-dev.arizona.edu/files/icon_money.png");
+	   				size: contain;
+	   				position: top left;
+	   				repeat: no-repeat;
+	   			}
+	   		}
+
+	   		& + .scholarship-card {
+	   			margin-left: 30px;
+	   		}
+	   	}
+
+	   	.scholarship-title {
+	   		margin: .5em 0;
+	   	}
+
+	   	.scholarship-details {
+	   		position: relative;
+	   		max-width: 200px;
+	   		margin-top: 1rem;
+	   		padding-top: 2rem;
+
+	   		&:before {
+	   			content: "";
+	   			display: block;
+	   			position: absolute;
+	   			top: 0px;
+	   			left: 50%;
+	   			-webkit-transform: translateX(-50%);
+	   					transform: translateX(-50%);
+
+	   			width: 100px;
+	   			height: 4px;
+	   			background-color: $azurite;
+	   		}
+	   	}
+
+	   	.scholarships-extra-info {
+	   		margin: 2rem auto;
+	   		max-width: 645px;
+	   	}
+	   	.scholarships-learn-more {
+	   		margin: 2rem auto 0;
+	   		max-width: 350px;
+	   	}
+	}
+
+
+
+
+
+
+
+
+
+	
+
+	/*
+	* > FULL WIDTH CONTENT BOTTOM - "Best Buy" Section
+	*/
+	.region-full-width-content-bottom {
+		position: relative;
+
+		&:before, &:after {			
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0px;
+
+			width: 50%;
+			height: 100%;
+
+			z-index: -1;
+		}
+		&:before {
+			left: 0px;
+			background: {
+				image: url("/sites/admissions-dev.arizona.edu/files/AZBestBuy_bg.jpg");
+				size: cover;
+				position: center center;
+				repeat: no-repeat;
+			}
+		}
+		&:after {
+			right: 0px;
+			background-color: rgba($oasis, .08);
+		}
+		.arizona-best-buy {
+			.arizona-best-buy-section {
+				padding: 4rem;
+			}
+			div[class*="col-"] {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.flex-column {
+				display: flex;
+				flex-direction: column;
+			}
+			.flex-left {
+				align-items: flex-start !important;
+			}
+
+			.border-oasis {
+				border-bottom: 5px solid $oasis;
+				padding-bottom: .75rem;
+			}
+
+			.card {
+				padding: 80px;
+				margin: 0px;
+				border: none;
+
+				&:before {
+					content: "";
+					position: absolute;
+					top: 40px;
+					left: 40px;
+
+					width: calc(100% - 80px);
+					height: calc(100% - 80px);
+
+					border: 3px solid rgba(#fff, .9);
+				}
+			}
+
+			.arizona-best-buy-pricing {
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+
+				.flex-column {
+					width: 50%;
+					&:nth-of-type(odd) {
+						padding: 0 1rem 0 0;
+					}
+					&:nth-of-type(even) {
+						padding: 0 0 0 1rem;
+						border-left: 2px solid $bloom;
+					}
+				}
+			}
+
+			.large-number {
+				font-size: 5em;
+				line-height: 1em;
+			}
+			.large-number-description {
+				margin: 0;
+			}
+		}
+		
+	}
+
+
+
+
+
+
+	/*
+	* > CONTENT BOTTOM PRESCRIPT - Types of Aid Section
+	*/
+	.adm-section-content-bottom-pre {
+		background: {
+			image: url("/sites/admissions-dev.arizona.edu/files/TypesAid_photo.jpg");
+			size: cover;
+			position: center center;
+			repeat: no-repeat;
+		}
+	    padding: 5rem 0;
+
+	    .region-content-bottom-prescript {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+	    }
+
+	    #block-bean-cost-aid-freshmen-types-of-a, #block-quicktabs-cost-aid-freshmen-quicktab-types {
+			background-color: rgba(#fff, .9);
+	    	width: 41.66667%;
+	    }
+	    #block-bean-cost-aid-freshmen-types-of-a {
+	    	padding: 2rem 2rem 0 2rem;
+	    }
+	    
+
+	    #block-quicktabs-cost-aid-freshmen-quicktab-types {
+	    	padding: 0rem 2rem 2rem 2rem;
+
+	    	.item-list, #quicktabs-container-cost_aid_freshmen_quicktab_types {
+	    		display: inline-block;
+	    		position: relative;
+	    	}
+	    	.item-list {
+	    		width: 40%;
+	    	}
+	    	#quicktabs-container-cost_aid_freshmen_quicktab_types {
+	    		width: 60%;
+	    		min-height: 250px;
+	    	}
+
+	    	#quicktabs-cost_aid_freshmen_quicktab_types {
+	    		display: flex;
+	    		align-items: flex-start;
+	    	}
+
+	    	.quicktabs-tabs {
+	    		background-color: transparent;
+	    		border: none;
+
+	    		li {
+	    			-webkit-box-sizing: border-box;
+							box-sizing: border-box;
+	    			display: block;
+	    			width: 100%;
+	    			text-transform: none;
+	    			border: none;
+	    			// .text-size-h4 font sizing
+	    			font-size: 18px;
+	    			padding: 0;
+	    			cursor: pointer;
+
+	    			&:before {
+	    				content: "";
+	    				-webkit-box-sizing: border-box;
+	    						box-sizing: border-box;
+
+						position: absolute;
+						left: 0px;
+						top: 49%;
+						-webkit-transform: translateY(-50%);
+								transform: translateY(-50%);
+						width: 15px;
+						height: 15px;
+						border: 3px solid $azurite;
+						border-radius: 50%;
+
+						transition: background-color .2s;
+	    			}
+
+	    			&.active {
+	    				cursor: default;
+	    				&:before {
+	    					background-color: $azurite;
+	    				}
+	    				&:hover {
+	    					a {
+	    						color: $az_blue;
+	    					}
+	    				}
+	    			}
+
+	    			&:hover {
+	    				a {
+		    				background-color: transparent;
+		    				color: $oasis;
+	    				}
+	    			}
+	    		}
+
+	    		a {
+	    			display: block;
+	    			color: $az_blue;
+	    			text-align: left;
+    				background-color: transparent;
+    				padding: 0.35rem 1rem .35rem 1.5rem;
+	    		}
+	    	}
+	    }
+	}
+
+
+
+
+
+
+
+
+	/*
+	* > CONTENT BOTTOM - Graduate w/ Debt Section
+	*/
+	.adm-section-content-bottom {
+		background-color: rgba($oasis, .08);
+	    padding: 5rem 0;
+
+	    .income-graphic {
+	    	margin: 1rem 0;
+	    }
+	    @keyframes statSlideUp{
+	    	0%{top:0;}
+	    	100%{top:-110%;}
+	    }
+	    @keyframes statSlideDown{
+	    	0%{bottom:0;}
+	    	100%{bottom:-110%;}
+	    }
+	    #willIGradContainer{
+	    	position:relative;
+	    	margin:0 auto;
+	    	float:none;
+	    	.willIGradArrowRow{
+	    		display:flex;
+	    		flex-direction:row;
+	    		flex-wrap:nowrap;
+	    		justify-content:center;
+	    		width:66.666%;
+	    		margin:0 auto;
+	    		@media(max-width:991px){
+	    			flex-direction:column-reverse;
+	    			width:100%;
+	    		}
+	    		&#willIGradArrowRowDown{
+	    			@media(max-width:991px){
+	    				flex-direction:column !important;
+	    			}
+	    			.mainTextContainer{
+	    				margin-top:3rem;
+	    				@media(max-width:991px){
+	    					margin-top:1rem;
+	    				}				
+	    			}
+	    		}
+	    		.willIGradArrowArea{
+	    			position:relative;
+	    			overflow:hidden;
+	    			height:auto;
+	    			background-color:#eff6fa;
+	    			.willIGradSlide{
+	    				width:100%;
+	    				height:100%;
+	    				position:absolute;
+	    				left:0;
+	    				right:0;
+	    				margin:0 auto;
+	    				background:#eff6fa;
+	    				z-index:5;
+	    			}
+	    			.arrowContainer{
+	    				position:relative;
+	    				display:block;
+	    				margin:0 auto;
+	    				.willIgradArrow{
+	    					width:115px;
+	    					height:145px;
+	    					margin:0 auto;
+	    					display:block;
+	    					position:relative;
+	    					&:before{
+	    						content: '';
+	    						border-left: 90px solid transparent;
+	    						border-right: 90px solid transparent;
+	    						position: absolute;
+	    						margin: 0 auto;
+	    						left: -33px;
+	    						right: 0;
+	    						width:90px;
+	    					}
+	    					.arrowText, .arrowMainText{
+	    						display:block;
+	    						position:absolute;
+	    						margin:0 auto;
+	    						left:0;
+	    						right:0;
+	    						font-size:48px;
+	    						font-weight:bold;
+	    						line-height:57px;
+	    						text-align:center;
+	    					}
+	    					.arrowText{
+	    						color:#ffffff;
+	    					}
+	    					.arrowMainText{
+	    						background-color:#eff6fa;
+	    					}
+	    				}
+	    			}
+	    		}
+	    		.mainTextContainer{
+	    			flex-grow:1;
+	    		}
+	    		#willIGradAreaUp{
+	    			&.willIGradArrowArea{
+	    				.willIGradSlide{
+	    					top:0;
+	    					&.opaAnimText{
+	    						animation:statSlideUp 1.2s forwards linear; 
+	    					}
+	    				}
+	    				.arrowContainer{
+	    					.willIgradArrow{
+	    						background-color:#1E5288;
+	    						margin:90px auto 0 auto;
+	    						&:before{
+	    							border-bottom: 90px solid #1E5288;
+	    							top: -90px;
+	    						}
+	    						.arrowText{
+	    							left:0;
+	    							bottom:83px;
+	    						}
+	    						.arrowMainText{
+	    							color:#1E5288;
+	    							bottom:26px;
+	    							left:-60px;
+	    						}
+	    					}
+	    				}
+	    			}
+	    		}
+	    		#willIGradAreaDown{
+	    			&.willIGradArrowArea{
+	    				.willIGradSlide{
+	    					bottom:0;
+	    					&.opaAnimText{
+	    						animation:statSlideDown 1.2s forwards linear; 
+	    					}
+	    				}
+	    				.arrowContainer{
+	    					.willIgradArrow{
+	    						background-color:#AB0520;
+	    						margin:0 auto 90px auto;
+	    						&:before{
+	    							border-top: 90px solid #AB0520;
+	    							bottom: -90px;
+	    						}
+	    						.arrowText{
+	    							top:5px;
+	    						}
+	    						.arrowMainText{
+	    							color:#AB0520;
+	    							top:65px;
+	    							left:-31px;
+	    						}
+	    					}
+	    				}
+	    			}
+	    		}
+	    	}
+	    	.verySpecialHrRow{
+	    			position:relative;
+	    			height:2px;
+	    			line-height:0;
+	    			margin:0 auto;
+	    			width:66.666%;
+	    			@media(max-width:991px){
+	    				width:100%;
+	    			}
+	    		.verySpecialHr{
+	    			position:relative;
+	    			vertical-align:middle;
+	    			border-bottom:2px dashed #000000;
+	    			@media(max-width:991px){
+	    				display:none;
+	    				width:100%;
+	    				float:right;
+	    				right:140px;
+	    			}
+	    		}
+	    		.verySpecialHrText{
+	    			display:block;
+	    			position:relative;
+	    			line-height:0;
+	    			font-size:20px;
+	    			padding-left:1.3rem;
+	    			font-style:italic;
+	    			@media(max-width:991px){
+	    				display:none;
+	    				position:absolute;
+	    				right:0;
+	    			}
+	    			span{
+	    				@media(max-width:991px){
+	    					position:absolute;
+	    					right:0;
+	    				}
+	    			}
+	    		}
+	    	}
+	    	.mainTextContainer{
+	    		margin-top:2rem;
+	    		padding-left:1.4rem;
+	    	}
+	    	.top-buffer-xs-50{
+	    		margin-top:50px;
+	    		.col-xs-12{
+	    			@media(max-width:991px){
+	    				text-align:left;
+	    			}
+	    		}
+	    	}
+	    }
+	}
+
+
+
+
+
+
+
+
+	/*
+	* > CONTENT BOTTOM POSTSCRIPT - Fund My Education Section
+	*/
+	.adm-section-content-bottom-post {
+	    padding: 5rem 0;
+
+	    .piggy-bank-icon-wrap {
+	    	display: block;
+	    	position: relative;
+	    	width: 100%;
+	    	z-index: 0;
+
+	    	&:before {
+	    		content: "";
+	    		display: block;
+	    		position: absolute;
+	    		bottom: 20%;
+	    		left: 0px;
+
+	    		width: 100%;
+	    		height: 3px;
+	    		background-color: $oasis;
+	    		z-index: -1;
+	    	}
+   	    }
+
+	    h2 {
+	    	margin: .5em 0px;
+	    }
+
+	    .funding-card {
+	    	padding: 2rem 0;
+	    }
+
+	    .flex-wrap {
+	    	div[class*="col-"] {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-self: stretch;
+			}
+			.flex-column {
+				flex-direction: column;
+			}
+	    }
+	}
+
+
+
+
+
+	/*
+	* > FOOTER PRESCRIPT - Have Questions Section
+	*/
+	.adm-section-footer-pre {
+		padding: 5rem 0px;
+		background-color: $az_blue;
+	}
+
+
+
+
+
+
+	/*
+	* > GENERAL
+	*/
+	.flex-wrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.padding-bottom-zero {
+		padding-bottom: 0px !important;
+	}
+
+	.display-block {
+		display: block;
+	}
+
+	.btn-ext-white {
+		&:after {
+			content: "\0020";
+			display: block;
+			position: absolute;
+			top: 8px;
+			right: 8px;
+			width: 0px;
+			height: 0px;
+
+			border-top: 10px solid #fff;
+			border-right: 10px solid #fff;
+			border-bottom: 10px solid transparent;
+			border-left: 10px solid transparent;
+		}
+	}
+
+	.text-transform-none {
+		text-transform: none;
+	}
+
+
+	.btn-hollow {
+		&.red-wedge {
+			&:after {
+				right: 2px;
+			}
+		}
+	}
+
+	.white-wedge {
+		position: relative;
+		padding-right: 1em;
+
+		&:after {
+			content: "\0020";
+			display: block;
+			position: absolute;
+			top: 2px;
+			right: 0px;
+			width: 0px;
+			height: 0px;
+			border-top: 5px solid #fff;
+			border-right: 5px solid #fff;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid transparent;
+		}
+	}
+}
+
+
+
+
+/*
+* > MEDIA QUERIES
+*/
+.page-node-3067 {
+	/*
+	* >> @1199px
+	*/
+	@media screen and (max-width: 1199px) {
+		.adm-section-content {
+			#block-quicktabs-cost-aid-quicktab-tuition-fees {
+				width: 66.66667%;
+			}
+		}
+		.adm-section-content-bottom-pre {
+			#block-bean-cost-aid-freshmen-types-of-a, #block-quicktabs-cost-aid-freshmen-quicktab-types {
+				width: 66.66667%;
+			}
+		}
+	}
+	/*
+	* >> @991px
+	*/
+	@media screen and (max-width: 991px) {
+		.adm-section-content-pre {
+			padding: 2rem 0;
+			.stat-item {
+				margin: 2rem 0;
+			}
+			.stat {
+				margin: 0px auto;
+			}
+		}
+
+		.adm-section-content {
+			
+
+
+
+			#block-quicktabs-cost-aid-quicktab-tuition-fees {
+				width: 100%;
+			}
+			#block-bean-cost-aid-freshmen-tuition-2, .tuition-and-fees-animation-content {
+				position: relative;
+				top: 0px;
+				right: 0px;
+				left: 0px;
+				-webkit-transform: scale(1);
+						transform: scale(1);
+			}
+			#block-bean-cost-aid-freshmen-tuition-2 {
+				background: {
+					image: url("/sites/admissions-dev.arizona.edu/files/mobile_tuition_fees.jpg");
+					size: cover;
+					position: center 20%;
+					repeat: no-repeat;
+				}
+
+				&:after {
+			    	content: "";
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(#ffffff, .75);
+
+					z-index: -1;
+			    }
+
+			}
+			.tuition-and-fees-animation-content {
+				-webkit-transform: none;
+						transform: none;
+				padding: 3rem 1.5rem;
+			}
+
+			.card.bg-blue-transparent, #block-quicktabs-cost-aid-quicktab-tuition-fees {
+				background-color: $az_blue;
+			}
+			#block-bean-cost-aid-freshmen-tuition-f {
+			    // >> Triangle Pseudo
+			    &:before {
+			    	content: "";
+			    	position: absolute;
+			    	top: 0px;
+			    	left: 50%;
+			    	-webkit-transform: translateX(-50%);
+			    			transform: translateX(-50%);
+					transition: top .5s 1s;
+
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 32px 32px 0 32px;
+					border-color: $sky transparent transparent transparent;
+
+					z-index: 2;
+			    }
+			}
+			.card.bg-blue-transparent {
+				padding: 3rem 1.5rem;
+
+			}
+			.net-price-calculator-card {
+				border: none;
+				margin-top: 0px;
+				padding: 3rem 1.5rem;
+			}
+		}
+
+
+
+
+		.adm-section-content-bottom-pre {
+			#block-bean-cost-aid-freshmen-types-of-a, #block-quicktabs-cost-aid-freshmen-quicktab-types {
+				width: 100%;
+			}
+		}
+
+
+		.adm-section-content-post {
+			.flex-wrap {
+				flex-direction: column;
+			}
+			.scholarship-card {
+				width: 100%;
+				margin: 1rem 0;
+				& + .scholarship-card {
+					margin-left: 0px;
+				}
+			}
+		}
+
+
+		.region-full-width-content-bottom {
+			&:before, &:after {
+				width: 100%;
+				height: 50%;
+				left: 0px;
+			}
+			&:after {
+				top: 50%;
+				right: auto;
+			}
+
+			.arizona-best-buy {
+				> .flex-wrap {
+					flex-direction: column;
+				}
+
+				.arizona-best-buy-section {
+					padding: 4rem 0;
+
+					&:last-of-type {
+						padding: 4rem 3rem;
+					}
+				}
+			}
+		}
+
+		.adm-section-content-bottom-post {
+			.flex-wrap {
+				flex-direction: column;
+			}
+		}	
+	}
+
+	/*
+	* >> @768px
+	*/
+	@media screen and (max-width: 768px) {
+		.adm-section-content-top {
+			background-image: url("/sites/admissions-dev.arizona.edu/files/mobile_hero.jpg");
+			padding: 3rem 0;
+		}
+
+		.adm-section-content {
+			// background-image: url("/sites/admissions-dev.arizona.edu/files/mobile_tuition_fees.jpg");
+			padding: 3rem 0;
+
+
+		}
+
+		.adm-section-content-post {
+			padding: 0;
+		}
+
+		.adm-section-content-bottom-pre {
+			background-image: url("/sites/admissions-dev.arizona.edu/files/mobile_types_of_aid.jpg");
+			padding: 3rem 0;
+		}
+
+		.adm-section-content-bottom {
+			padding: 2rem 0;
+		}
+
+		.adm-section-content-bottom-post {
+			padding: 2rem 0;
+		}
+
+		.adm-section-footer-pre {
+			padding: 2rem 0;
+		}
+	}
+
+	@media screen and (max-width: 752px) {
+		.adm-section-content {
+			background: none;
+			padding: 0px;
+
+			> .container {
+				padding: 0px;
+			}
+
+			&:before, &:after {
+				display: none;
+			}
+		}
+	}
+
+	/*
+	* >> @730px
+	*/
+	@media screen and (max-width: 730px) {
+		.region-full-width-content-bottom {
+			&:before, &:after {
+				display: none;
+			}
+			
+			.arizona-best-buy-section {
+				&:first-of-type {
+					background: {
+						image: url("/sites/admissions-dev.arizona.edu/files/AZBestBuy_bg.jpg");
+						size: cover;
+						position: center center;
+						repeat: no-repeat;
+					}
+				}
+				&:last-of-type {
+					background-color: rgba($oasis, .08);
+				}
+			}
+		}
+	}
+
+}
